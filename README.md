@@ -28,7 +28,7 @@ SDK需要Apache Httpclient4.5.12 和 Gson支持
 
 SDK　Jar包下载地址
 
-
+https://raw.githubusercontent.com/quchuanping/stbzJavaSDK/master/out/artifacts/stbzSdk/stbzSdk.jar
 
 
 SDK基本用法示例
