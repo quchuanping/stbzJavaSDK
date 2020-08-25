@@ -119,8 +119,8 @@ SDK基本用法示例
             address.setDescription("光明小区110号");
 
             CheckOrderRequest.Spu spu = new CheckOrderRequest.Spu();
-            spu.setNumber(1);
-            spu.setSku(2033490);
+            spu.setNumber((long)1);
+            spu.setSku((long)2033490);
             List spuList = new ArrayList<>();
             spuList.add(spu);
 
@@ -146,7 +146,7 @@ SDK基本用法示例
             address.setDescription("光明小区110号");
 
             CheckOrderRequest.Spu spu2 = new CheckOrderRequest.Spu();
-            spu2.setNumber(1);
+            spu2.setNumber((long)1);
             spu2.setSku((long)2033490);
             List spuList2 = new ArrayList<>();
 
@@ -172,7 +172,7 @@ SDK基本用法示例
             address2.setDescription("光明小区110号");
 
             PlayOrderRequest.Spu spu3 = new PlayOrderRequest.Spu();
-            spu3.setNumber(1);
+            spu3.setNumber((long)1);
             spu3.setSku((long)2033490);
             List spuList3 = new ArrayList<>();
             spuList2.add(spu3);
@@ -229,7 +229,7 @@ SDK基本用法示例
             // 查询物流
             OrderLogisticRequest orderLogisticRequest = new OrderLogisticRequest();
             orderLogisticRequest.setOrderSn("20200610111116");
-            orderLogisticRequest.setSku(4339236);
+            orderLogisticRequest.setSku((long)4339236);
 
             ApiResponse<OrderLogistic> apiResponse6 = apiClient.exec(orderLogisticRequest);
             List<OrderLogistic> listOrderLog = apiResponse6.getLists();
@@ -248,8 +248,8 @@ SDK基本用法示例
 
             //选品库添加商品
             GoodsStorageAddRequest goodsStorageAddRequest = new GoodsStorageAddRequest();
-            Set<Integer> set = new HashSet<>();
-            set.add(226415);
+            Set<Long> set = new HashSet<>();
+            set.add((long)226415);
             goodsStorageAddRequest.setGoods_ids(set);
             ApiResponse<GoodsStorage> apiResponse8 = apiClient.exec(goodsStorageAddRequest);
             GoodsStorage goodsStorage = apiResponse8.getObject();
@@ -270,8 +270,8 @@ SDK基本用法示例
 
             //选品库删除选品
             GoodsStorageDelRequest goodsStorageDelRequest = new GoodsStorageDelRequest();
-            Set<Integer> set2 = new HashSet<>();
-            set2.add(226415);
+            Set<Long> set2 = new HashSet<>();
+            set2.add((long)226415);
             goodsStorageDelRequest.setGoods_ids(set2);
             ApiResponse<GoodsStorage> apiResponse10 = apiClient.exec(goodsStorageDelRequest);
             GoodsStorage goodsStorage2 = apiResponse10.getObject();
