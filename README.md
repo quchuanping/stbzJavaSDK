@@ -28,7 +28,7 @@ SDK需要Apache Httpclient4.5.12 和 Gson支持
 
 SDK　Jar包下载地址
 
-https://raw.githubusercontent.com/quchuanping/stbzJavaSDK/master/out/artifacts/stbzSdk/stbzSdk.jar
+https://github.com/quchuanping/stbzJavaSDK/blob/master/out/artifacts/stbzSdk/sdk.jar
 
 
 SDK基本用法示例
@@ -54,14 +54,40 @@ SDK基本用法示例
 
             //商品详情
             GoodsDetailRequest goodsDetailRequest = new GoodsDetailRequest();
-            goodsDetailRequest.setId(10362);
+            goodsDetailRequest.setId((long)10362);
             ApiResponse<GoodsDetail> apiResponse2 = apiClient.exec(goodsDetailRequest);
             GoodsDetail goodsDetail = apiResponse2.getObject();
             System.out.println(goodsDetail.getTitle());
 
 
+            //        //批量获取商品详情
+            //        BatchGoodsDetailRequest batchGoodsDetailRequest = new BatchGoodsDetailRequest();
+            //        batchGoodsDetailRequest.setIds("10362,10363");
+            //        ApiResponse<GoodsDetail> apiResponse2 = apiClient.exec(batchGoodsDetailRequest);
+            //        List<GoodsDetail> listGoodsDetail = apiResponse2.getLists();
+            //        GoodsDetail goodsDetail = listGoodsDetail.get(0);
+            //        System.out.println(goodsDetail.getTitle());
 
-            //商品分类
+
+            //        //批量新商品
+            //        BatchGoodsUpdateRequest batchGoodsUpdateRequest = new BatchGoodsUpdateRequest();
+            //        batchGoodsUpdateRequest.setGoodsIds("10362,10363");
+            //        ApiResponse<String> apiResponse5 = apiClient.exec(batchGoodsUpdateRequest);
+            //        List<String> list = apiResponse5.getLists();
+            //        System.out.println(list.size());
+
+
+            //        //获取商品评论
+            //        GoodsCommentsRequest goodsCommentsRequest = new GoodsCommentsRequest();
+            //        goodsCommentsRequest.setPage(1);
+            //        goodsCommentsRequest.setLimit(10);
+            //        goodsCommentsRequest.setSku((long)10362);
+            //        ApiResponse<GoodsComments> apiResponse = apiClient.exec(goodsCommentsRequest);
+            //        List<GoodsComments> list = apiResponse.getLists();
+            //        System.out.println(apiResponse.getCount());
+
+
+            //全量商品分类
             CategoryListRequest request = new CategoryListRequest();
             request.setPage(1);
             request.setLimit(10);
@@ -71,6 +97,14 @@ SDK基本用法示例
             List<CategoryList> listCateGory = apiResponse3.getLists();
             CategoryList categoryList = listCateGory.get(0);
             System.out.println(categoryList.getTitle());
+            
+            //        //逐级商品列表
+            //        SubCategoryRequest subCategoryRequest = new SubCategoryRequest();
+            //        subCategoryRequest.setParent_id(0);
+            //        subCategoryRequest.setSource(2);
+            //        ApiResponse<SubCategory> apiResponseSubCate = apiClient.exec(subCategoryRequest);
+            //        List<SubCategory> list = apiResponseSubCate.getLists();
+            //        System.out.println(list.get(0).getTitle());
 
 
             //下单校验
@@ -113,7 +147,7 @@ SDK基本用法示例
 
             CheckOrderRequest.Spu spu2 = new CheckOrderRequest.Spu();
             spu2.setNumber(1);
-            spu2.setSku(2033490);
+            spu2.setSku((long)2033490);
             List spuList2 = new ArrayList<>();
 
             spuList.add(spu2);
@@ -139,7 +173,7 @@ SDK基本用法示例
 
             PlayOrderRequest.Spu spu3 = new PlayOrderRequest.Spu();
             spu3.setNumber(1);
-            spu3.setSku(2033490);
+            spu3.setSku((long)2033490);
             List spuList3 = new ArrayList<>();
             spuList2.add(spu3);
 
