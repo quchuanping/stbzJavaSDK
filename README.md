@@ -60,31 +60,31 @@ SDK基本用法示例
             System.out.println(goodsDetail.getTitle());
 
 
-            //        //批量获取商品详情
-            //        BatchGoodsDetailRequest batchGoodsDetailRequest = new BatchGoodsDetailRequest();
-            //        batchGoodsDetailRequest.setIds("10362,10363");
-            //        ApiResponse<GoodsDetail> apiResponse2 = apiClient.exec(batchGoodsDetailRequest);
-            //        List<GoodsDetail> listGoodsDetail = apiResponse2.getLists();
-            //        GoodsDetail goodsDetail = listGoodsDetail.get(0);
-            //        System.out.println(goodsDetail.getTitle());
+            //批量获取商品详情
+            BatchGoodsDetailRequest batchGoodsDetailRequest = new BatchGoodsDetailRequest();
+            batchGoodsDetailRequest.setIds("10362,10363");
+            ApiResponse<GoodsDetail> apiResponse2 = apiClient.exec(batchGoodsDetailRequest);
+            List<GoodsDetail> listGoodsDetail = apiResponse2.getLists();
+            GoodsDetail goodsDetail = listGoodsDetail.get(0);
+            System.out.println(goodsDetail.getTitle());
 
 
-            //        //批量新商品
-            //        BatchGoodsUpdateRequest batchGoodsUpdateRequest = new BatchGoodsUpdateRequest();
-            //        batchGoodsUpdateRequest.setGoodsIds("10362,10363");
-            //        ApiResponse<String> apiResponse5 = apiClient.exec(batchGoodsUpdateRequest);
-            //        List<String> list = apiResponse5.getLists();
-            //        System.out.println(list.size());
+            //批量新商品
+            BatchGoodsUpdateRequest batchGoodsUpdateRequest = new BatchGoodsUpdateRequest();
+            batchGoodsUpdateRequest.setGoodsIds("10362,10363");
+            ApiResponse<String> apiResponse5 = apiClient.exec(batchGoodsUpdateRequest);
+            List<String> list = apiResponse5.getLists();
+            System.out.println(list.size());
 
 
-            //        //获取商品评论
-            //        GoodsCommentsRequest goodsCommentsRequest = new GoodsCommentsRequest();
-            //        goodsCommentsRequest.setPage(1);
-            //        goodsCommentsRequest.setLimit(10);
-            //        goodsCommentsRequest.setSku((long)10362);
-            //        ApiResponse<GoodsComments> apiResponse = apiClient.exec(goodsCommentsRequest);
-            //        List<GoodsComments> list = apiResponse.getLists();
-            //        System.out.println(apiResponse.getCount());
+            //获取商品评论
+            GoodsCommentsRequest goodsCommentsRequest = new GoodsCommentsRequest();
+            goodsCommentsRequest.setPage(1);
+            goodsCommentsRequest.setLimit(10);
+            goodsCommentsRequest.setSku((long)10362);
+            ApiResponse<GoodsComments> apiResponse = apiClient.exec(goodsCommentsRequest);
+            List<GoodsComments> list = apiResponse.getLists();
+            System.out.println(apiResponse.getCount());
 
 
             //全量商品分类
@@ -98,13 +98,13 @@ SDK基本用法示例
             CategoryList categoryList = listCateGory.get(0);
             System.out.println(categoryList.getTitle());
             
-            //        //逐级商品列表
-            //        SubCategoryRequest subCategoryRequest = new SubCategoryRequest();
-            //        subCategoryRequest.setParent_id(0);
-            //        subCategoryRequest.setSource(2);
-            //        ApiResponse<SubCategory> apiResponseSubCate = apiClient.exec(subCategoryRequest);
-            //        List<SubCategory> list = apiResponseSubCate.getLists();
-            //        System.out.println(list.get(0).getTitle());
+            //逐级商品列表
+            SubCategoryRequest subCategoryRequest = new SubCategoryRequest();
+            subCategoryRequest.setParent_id(0);
+            subCategoryRequest.setSource(2);
+            ApiResponse<SubCategory> apiResponseSubCate = apiClient.exec(subCategoryRequest);
+            List<SubCategory> list = apiResponseSubCate.getLists();
+            System.out.println(list.get(0).getTitle());
 
 
             //下单校验
