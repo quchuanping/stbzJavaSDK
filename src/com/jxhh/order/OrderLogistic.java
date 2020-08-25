@@ -15,7 +15,7 @@ public class OrderLogistic {
 
     private String message;
     private String source;
-    private int time;
+    private Integer time;
 
     public String getMessage() {
         return message;
@@ -33,11 +33,11 @@ public class OrderLogistic {
         this.source = source;
     }
 
-    public int getTime() {
+    public Integer getTime() {
         return time;
     }
 
-    public void setTime(int time) {
+    public void setTime(Integer time) {
         this.time = time;
     }
 }

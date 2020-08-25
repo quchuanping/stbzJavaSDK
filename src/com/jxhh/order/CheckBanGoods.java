@@ -13,7 +13,7 @@ public class CheckBanGoods{
      */
 
     private String msg;
-    private int code;
+    private Integer code;
     private DataBean data;
 
     public String getMsg() {
@@ -24,11 +24,11 @@ public class CheckBanGoods{
         this.msg = msg;
     }
 
-    public int getCode() {
+    public Integer getCode() {
         return code;
     }
 
-    public void setCode(int code) {
+    public void setCode(Integer code) {
         this.code = code;
     }
 
@@ -41,6 +41,7 @@ public class CheckBanGoods{
     }
 
     public static class DataBean implements Serializable {
+
         private List<Integer> available;
         private List<Integer> ban;
 

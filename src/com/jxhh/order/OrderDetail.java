@@ -31,17 +31,17 @@ public class OrderDetail {
     private String orderSn1;
     private String orderSn2;
     private String orderSn3;
-    private int source;
+    private Integer source;
     private String upstreamOrderSn1;
     private String upstreamOrderSn2;
     private AddressBean address;
     private GoodsBean goods;
-    private int goodsStatus;
-    private int deliverTime;
+    private Integer goodsStatus;
+    private Integer deliverTime;
     private String deliverName;
     private String deliverNo;
-    private int refundTime;
-    private int afterSaleStatus;
+    private Integer refundTime;
+    private Integer afterSaleStatus;
     private ShopInfoBean shopInfo;
 
     public String getOrderSn1() {
@@ -68,11 +68,11 @@ public class OrderDetail {
         this.orderSn3 = orderSn3;
     }
 
-    public int getSource() {
+    public Integer getSource() {
         return source;
     }
 
-    public void setSource(int source) {
+    public void setSource(Integer source) {
         this.source = source;
     }
 
@@ -108,19 +108,19 @@ public class OrderDetail {
         this.goods = goods;
     }
 
-    public int getGoodsStatus() {
+    public Integer getGoodsStatus() {
         return goodsStatus;
     }
 
-    public void setGoodsStatus(int goodsStatus) {
+    public void setGoodsStatus(Integer goodsStatus) {
         this.goodsStatus = goodsStatus;
     }
 
-    public int getDeliverTime() {
+    public Integer getDeliverTime() {
         return deliverTime;
     }
 
-    public void setDeliverTime(int deliverTime) {
+    public void setDeliverTime(Integer deliverTime) {
         this.deliverTime = deliverTime;
     }
 
@@ -140,19 +140,19 @@ public class OrderDetail {
         this.deliverNo = deliverNo;
     }
 
-    public int getRefundTime() {
+    public Integer getRefundTime() {
         return refundTime;
     }
 
-    public void setRefundTime(int refundTime) {
+    public void setRefundTime(Integer refundTime) {
         this.refundTime = refundTime;
     }
 
-    public int getAfterSaleStatus() {
+    public Integer getAfterSaleStatus() {
         return afterSaleStatus;
     }
 
-    public void setAfterSaleStatus(int afterSaleStatus) {
+    public void setAfterSaleStatus(Integer afterSaleStatus) {
         this.afterSaleStatus = afterSaleStatus;
     }
 
@@ -251,19 +251,19 @@ public class OrderDetail {
          * price : 1344
          */
 
-        private int id;
+        private Long id;
         private String name;
         private String image;
-        private int sku;
+        private Long sku;
         private String skuName;
-        private int Total;
-        private int price;
+        private Long Total;
+        private Long price;
 
-        public int getId() {
+        public Long getId() {
             return id;
         }
 
-        public void setId(int id) {
+        public void setId(Long id) {
             this.id = id;
         }
 
@@ -283,11 +283,11 @@ public class OrderDetail {
             this.image = image;
         }
 
-        public int getSku() {
+        public Long getSku() {
             return sku;
         }
 
-        public void setSku(int sku) {
+        public void setSku(Long sku) {
             this.sku = sku;
         }
 
@@ -299,19 +299,19 @@ public class OrderDetail {
             this.skuName = skuName;
         }
 
-        public int getTotal() {
+        public Long getTotal() {
             return Total;
         }
 
-        public void setTotal(int Total) {
-            this.Total = Total;
+        public void setTotal(Long total) {
+            Total = total;
         }
 
-        public int getPrice() {
+        public Long getPrice() {
             return price;
         }
 
-        public void setPrice(int price) {
+        public void setPrice(Long price) {
             this.price = price;
         }
     }

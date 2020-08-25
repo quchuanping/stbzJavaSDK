@@ -15,13 +15,13 @@ import java.util.TreeMap;
  */
 public class GoodsStorageAddRequest implements InterFaceRequest {
 
-    private Set<Integer> goods_ids;
+    private Set<Long> goods_ids;
 
-    public Set<Integer> getGoods_ids() {
+    public Set<Long> getGoods_ids() {
         return goods_ids;
     }
 
-    public void setGoods_ids(Set<Integer> goods_ids) {
+    public void setGoods_ids(Set<Long> goods_ids) {
         this.goods_ids = goods_ids;
     }
 
@@ -40,7 +40,7 @@ public class GoodsStorageAddRequest implements InterFaceRequest {
         TreeMap<String,Object> params = new TreeMap<>();
         if(null == getGoods_ids()) throw new MustParamsException("对象"+getClass()+": goods_ids不能为空");
         String goods_ids = "";
-        for (Integer i:getGoods_ids()) {
+        for (Long i:getGoods_ids()) {
             goods_ids = goods_ids+i+",";
         }
         if(goods_ids.length() > 2)goods_ids = goods_ids.substring(0, goods_ids.length()-1);

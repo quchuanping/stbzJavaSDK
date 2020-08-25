@@ -16,7 +16,7 @@ public class OrderLogisticRequest implements InterFaceRequest {
 
     private String orderSn;
 
-    private Integer sku;
+    private Long sku;
 
     public String getOrderSn() {
         return orderSn;
@@ -26,11 +26,11 @@ public class OrderLogisticRequest implements InterFaceRequest {
         this.orderSn = orderSn;
     }
 
-    public Integer getSku() {
+    public Long getSku() {
         return sku;
     }
 
-    public void setSku(Integer sku) {
+    public void setSku(Long sku) {
         this.sku = sku;
     }
 

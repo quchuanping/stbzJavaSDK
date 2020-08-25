@@ -44,37 +44,36 @@ public class GoodsList {
 	 */
 
 	private String third_category_name;
-	private int sale;
-	private int market_price;
-	private double activity_rate;
-	private int real_month_sale;
-	private int id;
+	private Integer sale;
+	private Integer market_price;
+	private Double activity_rate;
+	private Integer real_month_sale;
+	private Long id;
 	private String unit;
 	private String type;
-	private int total_stock;
-	private int activity_price;
-	private int created_time;
+	private Integer total_stock;
+	private Long activity_price;
+	private Integer created_time;
 	private String dis_category_id;
-	private int source;
+	private Integer source;
 	private String cover;
-	private int status;
-	private int is_free_shipping;
-	private int brand_id;
-	private int agreement_price;
-	private int stock;
+	private Integer status;
+	private Integer is_free_shipping;
+	private Integer brand_id;
+	private Integer agreement_price;
+	private Long stock;
 	private String third_brand_name;
-	private int choose_count;
-	private int real_sale;
-	private int shop_id;
-	private long third_id;
-	private int updated_time;
-	private int guide_price;
+	private Integer choose_count;
+	private Integer real_sale;
+	private Long shop_id;
+	private Long third_id;
+	private Integer updated_time;
+	private Long guide_price;
 	private String origin;
-	private int real_return_sale;
-	private int real_month_return_sale;
+	private Integer real_return_sale;
+	private Integer real_month_return_sale;
 	private String title;
-	private double rate;
-	private List<String> category_ids;
+	private Double rate;
 
 	public String getThird_category_name() {
 		return third_category_name;
@@ -84,43 +83,44 @@ public class GoodsList {
 		this.third_category_name = third_category_name;
 	}
 
-	public int getSale() {
+
+	public Integer getSale() {
 		return sale;
 	}
 
-	public void setSale(int sale) {
+	public void setSale(Integer sale) {
 		this.sale = sale;
 	}
 
-	public int getMarket_price() {
+	public Integer getMarket_price() {
 		return market_price;
 	}
 
-	public void setMarket_price(int market_price) {
+	public void setMarket_price(Integer market_price) {
 		this.market_price = market_price;
 	}
 
-	public double getActivity_rate() {
+	public Double getActivity_rate() {
 		return activity_rate;
 	}
 
-	public void setActivity_rate(double activity_rate) {
+	public void setActivity_rate(Double activity_rate) {
 		this.activity_rate = activity_rate;
 	}
 
-	public int getReal_month_sale() {
+	public Integer getReal_month_sale() {
 		return real_month_sale;
 	}
 
-	public void setReal_month_sale(int real_month_sale) {
+	public void setReal_month_sale(Integer real_month_sale) {
 		this.real_month_sale = real_month_sale;
 	}
 
-	public int getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
@@ -140,27 +140,27 @@ public class GoodsList {
 		this.type = type;
 	}
 
-	public int getTotal_stock() {
+	public Integer getTotal_stock() {
 		return total_stock;
 	}
 
-	public void setTotal_stock(int total_stock) {
+	public void setTotal_stock(Integer total_stock) {
 		this.total_stock = total_stock;
 	}
 
-	public int getActivity_price() {
+	public Long getActivity_price() {
 		return activity_price;
 	}
 
-	public void setActivity_price(int activity_price) {
+	public void setActivity_price(Long activity_price) {
 		this.activity_price = activity_price;
 	}
 
-	public int getCreated_time() {
+	public Integer getCreated_time() {
 		return created_time;
 	}
 
-	public void setCreated_time(int created_time) {
+	public void setCreated_time(Integer created_time) {
 		this.created_time = created_time;
 	}
 
@@ -172,11 +172,11 @@ public class GoodsList {
 		this.dis_category_id = dis_category_id;
 	}
 
-	public int getSource() {
+	public Integer getSource() {
 		return source;
 	}
 
-	public void setSource(int source) {
+	public void setSource(Integer source) {
 		this.source = source;
 	}
 
@@ -188,43 +188,43 @@ public class GoodsList {
 		this.cover = cover;
 	}
 
-	public int getStatus() {
+	public Integer getStatus() {
 		return status;
 	}
 
-	public void setStatus(int status) {
+	public void setStatus(Integer status) {
 		this.status = status;
 	}
 
-	public int getIs_free_shipping() {
+	public Integer getIs_free_shipping() {
 		return is_free_shipping;
 	}
 
-	public void setIs_free_shipping(int is_free_shipping) {
+	public void setIs_free_shipping(Integer is_free_shipping) {
 		this.is_free_shipping = is_free_shipping;
 	}
 
-	public int getBrand_id() {
+	public Integer getBrand_id() {
 		return brand_id;
 	}
 
-	public void setBrand_id(int brand_id) {
+	public void setBrand_id(Integer brand_id) {
 		this.brand_id = brand_id;
 	}
 
-	public int getAgreement_price() {
+	public Integer getAgreement_price() {
 		return agreement_price;
 	}
 
-	public void setAgreement_price(int agreement_price) {
+	public void setAgreement_price(Integer agreement_price) {
 		this.agreement_price = agreement_price;
 	}
 
-	public int getStock() {
+	public Long getStock() {
 		return stock;
 	}
 
-	public void setStock(int stock) {
+	public void setStock(Long stock) {
 		this.stock = stock;
 	}
 
@@ -236,51 +236,51 @@ public class GoodsList {
 		this.third_brand_name = third_brand_name;
 	}
 
-	public int getChoose_count() {
+	public Integer getChoose_count() {
 		return choose_count;
 	}
 
-	public void setChoose_count(int choose_count) {
+	public void setChoose_count(Integer choose_count) {
 		this.choose_count = choose_count;
 	}
 
-	public int getReal_sale() {
+	public Integer getReal_sale() {
 		return real_sale;
 	}
 
-	public void setReal_sale(int real_sale) {
+	public void setReal_sale(Integer real_sale) {
 		this.real_sale = real_sale;
 	}
 
-	public int getShop_id() {
+	public Long getShop_id() {
 		return shop_id;
 	}
 
-	public void setShop_id(int shop_id) {
+	public void setShop_id(Long shop_id) {
 		this.shop_id = shop_id;
 	}
 
-	public long getThird_id() {
+	public Long getThird_id() {
 		return third_id;
 	}
 
-	public void setThird_id(long third_id) {
+	public void setThird_id(Long third_id) {
 		this.third_id = third_id;
 	}
 
-	public int getUpdated_time() {
+	public Integer getUpdated_time() {
 		return updated_time;
 	}
 
-	public void setUpdated_time(int updated_time) {
+	public void setUpdated_time(Integer updated_time) {
 		this.updated_time = updated_time;
 	}
 
-	public int getGuide_price() {
+	public Long getGuide_price() {
 		return guide_price;
 	}
 
-	public void setGuide_price(int guide_price) {
+	public void setGuide_price(Long guide_price) {
 		this.guide_price = guide_price;
 	}
 
@@ -292,19 +292,19 @@ public class GoodsList {
 		this.origin = origin;
 	}
 
-	public int getReal_return_sale() {
+	public Integer getReal_return_sale() {
 		return real_return_sale;
 	}
 
-	public void setReal_return_sale(int real_return_sale) {
+	public void setReal_return_sale(Integer real_return_sale) {
 		this.real_return_sale = real_return_sale;
 	}
 
-	public int getReal_month_return_sale() {
+	public Integer getReal_month_return_sale() {
 		return real_month_return_sale;
 	}
 
-	public void setReal_month_return_sale(int real_month_return_sale) {
+	public void setReal_month_return_sale(Integer real_month_return_sale) {
 		this.real_month_return_sale = real_month_return_sale;
 	}
 
@@ -316,11 +316,11 @@ public class GoodsList {
 		this.title = title;
 	}
 
-	public double getRate() {
+	public Double getRate() {
 		return rate;
 	}
 
-	public void setRate(double rate) {
+	public void setRate(Double rate) {
 		this.rate = rate;
 	}
 
@@ -331,4 +331,10 @@ public class GoodsList {
 	public void setCategory_ids(List<String> category_ids) {
 		this.category_ids = category_ids;
 	}
+
+	private List<String> category_ids;
+
+
+
+
 }

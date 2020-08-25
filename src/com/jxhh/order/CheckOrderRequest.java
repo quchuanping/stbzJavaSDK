@@ -89,11 +89,11 @@ public class CheckOrderRequest implements InterFaceRequest {
      */
     public static class Spu{
 
-        private Integer sku;
+        private Long sku;
 
-        private Integer number;
+        private Long number;
 
-        public Integer getSku() {
+        public Long getSku() {
             return sku;
         }
 
@@ -102,11 +102,11 @@ public class CheckOrderRequest implements InterFaceRequest {
          * 商品唯一规格id
          * @param sku
          */
-        public void setSku(Integer sku) {
+        public void setSku(Long sku) {
             this.sku = sku;
         }
 
-        public Integer getNumber() {
+        public Long getNumber() {
             return number;
         }
 
@@ -114,7 +114,7 @@ public class CheckOrderRequest implements InterFaceRequest {
          * 数量
          * @param number
          */
-        public void setNumber(Integer number) {
+        public void setNumber(Long number) {
             this.number = number;
         }
     }

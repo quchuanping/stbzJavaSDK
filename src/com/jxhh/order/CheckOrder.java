@@ -14,14 +14,15 @@ public class CheckOrder {
      * skus : [2033490]
      */
 
-    private int freight;
+    private Long freight;
+
     private List<Integer> skus;
 
-    public int getFreight() {
+    public Long getFreight() {
         return freight;
     }
 
-    public void setFreight(int freight) {
+    public void setFreight(Long freight) {
         this.freight = freight;
     }
 

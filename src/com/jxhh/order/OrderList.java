@@ -24,23 +24,23 @@ public class OrderList {
      * children : [{"sn":"20200622151646241976_2_1","source":2,"logisticFee":800,"goodsFee":1344,"goodsStatus":0,"orderStatus":2,"goods":[{"sn":"20200622151646241976_2_1_1","goodsId":9401,"sku":9054,"skuName":"【舒缓蚊叮】护肤香膏20g×2支","image":"https://img13.360buyimg.com/n1/jfs/t1/126453/35/1319/78959/5ebba3c1E79314ed2/e909785ed7df9118.jpg","name":"润本（RUNBEN) 宝宝痱子香膏 20g×2支装 止痒膏 婴童护肤 护臀膏 润肤乳","number":1,"price":1344,"refundTime":0,"createdTime":1592810206,"payStatus":0,"deliverName":"","deliverNo":"","afterSaleStatus":0}],"deliverTime":0,"createdTime":1592810206,"shopInfo":{"name":"京东自营","companyName":"","contactName":"","mobile":"","phone":"","contactURL":""}}]
      */
 
-    private int id;
+    private Long id;
     private String sn;
     private String thirdSn;
-    private int logisticFee;
-    private int goodsFee;
+    private Long logisticFee;
+    private Long goodsFee;
     private AddressBean address;
-    private int createdTime;
-    private int payStatus;
-    private int checkStatus;
-    private int status;
+    private Integer createdTime;
+    private Integer payStatus;
+    private Integer checkStatus;
+    private Integer status;
     private List<ChildrenBean> children;
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -60,19 +60,19 @@ public class OrderList {
         this.thirdSn = thirdSn;
     }
 
-    public int getLogisticFee() {
+    public Long getLogisticFee() {
         return logisticFee;
     }
 
-    public void setLogisticFee(int logisticFee) {
+    public void setLogisticFee(Long logisticFee) {
         this.logisticFee = logisticFee;
     }
 
-    public int getGoodsFee() {
+    public Long getGoodsFee() {
         return goodsFee;
     }
 
-    public void setGoodsFee(int goodsFee) {
+    public void setGoodsFee(Long goodsFee) {
         this.goodsFee = goodsFee;
     }
 
@@ -84,35 +84,35 @@ public class OrderList {
         this.address = address;
     }
 
-    public int getCreatedTime() {
+    public Integer getCreatedTime() {
         return createdTime;
     }
 
-    public void setCreatedTime(int createdTime) {
+    public void setCreatedTime(Integer createdTime) {
         this.createdTime = createdTime;
     }
 
-    public int getPayStatus() {
+    public Integer getPayStatus() {
         return payStatus;
     }
 
-    public void setPayStatus(int payStatus) {
+    public void setPayStatus(Integer payStatus) {
         this.payStatus = payStatus;
     }
 
-    public int getCheckStatus() {
+    public Integer getCheckStatus() {
         return checkStatus;
     }
 
-    public void setCheckStatus(int checkStatus) {
+    public void setCheckStatus(Integer checkStatus) {
         this.checkStatus = checkStatus;
     }
 
-    public int getStatus() {
+    public Integer getStatus() {
         return status;
     }
 
-    public void setStatus(int status) {
+    public void setStatus(Integer status) {
         this.status = status;
     }
 
@@ -215,15 +215,16 @@ public class OrderList {
          */
 
         private String sn;
-        private int source;
-        private int logisticFee;
-        private int goodsFee;
-        private int goodsStatus;
-        private int orderStatus;
-        private int deliverTime;
-        private int createdTime;
+        private Integer source;
+        private Long logisticFee;
+        private Long goodsFee;
+        private Integer goodsStatus;
+        private Integer orderStatus;
+        private Integer deliverTime;
+        private Integer createdTime;
         private ShopInfoBean shopInfo;
         private List<GoodsBean> goods;
+
 
         public String getSn() {
             return sn;
@@ -233,59 +234,59 @@ public class OrderList {
             this.sn = sn;
         }
 
-        public int getSource() {
+        public Integer getSource() {
             return source;
         }
 
-        public void setSource(int source) {
+        public void setSource(Integer source) {
             this.source = source;
         }
 
-        public int getLogisticFee() {
+        public Long getLogisticFee() {
             return logisticFee;
         }
 
-        public void setLogisticFee(int logisticFee) {
+        public void setLogisticFee(Long logisticFee) {
             this.logisticFee = logisticFee;
         }
 
-        public int getGoodsFee() {
+        public Long getGoodsFee() {
             return goodsFee;
         }
 
-        public void setGoodsFee(int goodsFee) {
+        public void setGoodsFee(Long goodsFee) {
             this.goodsFee = goodsFee;
         }
 
-        public int getGoodsStatus() {
+        public Integer getGoodsStatus() {
             return goodsStatus;
         }
 
-        public void setGoodsStatus(int goodsStatus) {
+        public void setGoodsStatus(Integer goodsStatus) {
             this.goodsStatus = goodsStatus;
         }
 
-        public int getOrderStatus() {
+        public Integer getOrderStatus() {
             return orderStatus;
         }
 
-        public void setOrderStatus(int orderStatus) {
+        public void setOrderStatus(Integer orderStatus) {
             this.orderStatus = orderStatus;
         }
 
-        public int getDeliverTime() {
+        public Integer getDeliverTime() {
             return deliverTime;
         }
 
-        public void setDeliverTime(int deliverTime) {
+        public void setDeliverTime(Integer deliverTime) {
             this.deliverTime = deliverTime;
         }
 
-        public int getCreatedTime() {
+        public Integer getCreatedTime() {
             return createdTime;
         }
 
-        public void setCreatedTime(int createdTime) {
+        public void setCreatedTime(Integer createdTime) {
             this.createdTime = createdTime;
         }
 
@@ -390,19 +391,19 @@ public class OrderList {
              */
 
             private String sn;
-            private int goodsId;
-            private int sku;
+            private Long goodsId;
+            private Long sku;
             private String skuName;
             private String image;
             private String name;
-            private int number;
-            private int price;
-            private int refundTime;
-            private int createdTime;
-            private int payStatus;
+            private Long number;
+            private Long price;
+            private Integer refundTime;
+            private Integer createdTime;
+            private Integer payStatus;
             private String deliverName;
             private String deliverNo;
-            private int afterSaleStatus;
+            private Integer afterSaleStatus;
 
             public String getSn() {
                 return sn;
@@ -412,19 +413,19 @@ public class OrderList {
                 this.sn = sn;
             }
 
-            public int getGoodsId() {
+            public Long getGoodsId() {
                 return goodsId;
             }
 
-            public void setGoodsId(int goodsId) {
+            public void setGoodsId(Long goodsId) {
                 this.goodsId = goodsId;
             }
 
-            public int getSku() {
+            public Long getSku() {
                 return sku;
             }
 
-            public void setSku(int sku) {
+            public void setSku(Long sku) {
                 this.sku = sku;
             }
 
@@ -452,43 +453,43 @@ public class OrderList {
                 this.name = name;
             }
 
-            public int getNumber() {
+            public Long getNumber() {
                 return number;
             }
 
-            public void setNumber(int number) {
+            public void setNumber(Long number) {
                 this.number = number;
             }
 
-            public int getPrice() {
+            public Long getPrice() {
                 return price;
             }
 
-            public void setPrice(int price) {
+            public void setPrice(Long price) {
                 this.price = price;
             }
 
-            public int getRefundTime() {
+            public Integer getRefundTime() {
                 return refundTime;
             }
 
-            public void setRefundTime(int refundTime) {
+            public void setRefundTime(Integer refundTime) {
                 this.refundTime = refundTime;
             }
 
-            public int getCreatedTime() {
+            public Integer getCreatedTime() {
                 return createdTime;
             }
 
-            public void setCreatedTime(int createdTime) {
+            public void setCreatedTime(Integer createdTime) {
                 this.createdTime = createdTime;
             }
 
-            public int getPayStatus() {
+            public Integer getPayStatus() {
                 return payStatus;
             }
 
-            public void setPayStatus(int payStatus) {
+            public void setPayStatus(Integer payStatus) {
                 this.payStatus = payStatus;
             }
 
@@ -508,11 +509,11 @@ public class OrderList {
                 this.deliverNo = deliverNo;
             }
 
-            public int getAfterSaleStatus() {
+            public Integer getAfterSaleStatus() {
                 return afterSaleStatus;
             }
 
-            public void setAfterSaleStatus(int afterSaleStatus) {
+            public void setAfterSaleStatus(Integer afterSaleStatus) {
                 this.afterSaleStatus = afterSaleStatus;
             }
         }

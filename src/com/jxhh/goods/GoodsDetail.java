@@ -49,69 +49,69 @@ public class GoodsDetail {
      * specs : {"names":[{"id":10354,"goods_id":10362,"name":"默认","sort":0}],"values":[{"id":10354,"goods_id":10362,"spec_name_id":10354,"name":"默认","sort":0}],"options":[{"id":10349,"goods_id":10362,"third_id":5923054,"spec_value_ids":"10354","spec_value_names":"默认","market_price":7200,"guide_price":2290,"activity_price":2290,"agreement_price":2405,"stock":0,"weight":0,"image":"https://img13.360buyimg.com/n0/jfs/t1/58116/6/10147/147489/5d77308dEc655b240/a4dc06786b433284.jpg","status":0}]}
      */
 
-    private int id;
-    private int third_id;
-    private int shop_id;
-    private int source;
+    private Long id;
+    private Long third_id;
+    private Long shop_id;
+    private Integer source;
     private String category_id;
-    private int brand_id;
+    private Long brand_id;
     private String third_category_name;
     private String third_brand_name;
     private String unit;
     private String origin;
     private String title;
-    private int market_price;
-    private int guide_price;
-    private int agreement_price;
-    private int activity_price;
-    private int activity_rate;
+    private Long market_price;
+    private Long guide_price;
+    private Long agreement_price;
+    private Long activity_price;
+    private Long activity_rate;
     private String cover;
-    private int stock;
-    private int total_stock;
-    private int status;
-    private int sale;
-    private int real_sale;
-    private int real_month_sale;
-    private int real_return_sale;
-    private int real_month_return_sale;
-    private int created_time;
-    private int updated_time;
-    private int is_free_shipping;
-    private int choose_count;
+    private Long stock;
+    private Long total_stock;
+    private Integer status;
+    private Integer sale;
+    private Integer real_sale;
+    private Integer real_month_sale;
+    private Integer real_return_sale;
+    private Integer real_month_return_sale;
+    private Integer created_time;
+    private Integer updated_time;
+    private Integer is_free_shipping;
+    private Integer choose_count;
     private String description;
     private SpecsBean specs;
     private List<String> covers;
     private List<?> attributes;
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
-    public int getThird_id() {
+    public Long getThird_id() {
         return third_id;
     }
 
-    public void setThird_id(int third_id) {
+    public void setThird_id(Long third_id) {
         this.third_id = third_id;
     }
 
-    public int getShop_id() {
+    public Long getShop_id() {
         return shop_id;
     }
 
-    public void setShop_id(int shop_id) {
+    public void setShop_id(Long shop_id) {
         this.shop_id = shop_id;
     }
 
-    public int getSource() {
+    public Integer getSource() {
         return source;
     }
 
-    public void setSource(int source) {
+    public void setSource(Integer source) {
         this.source = source;
     }
 
@@ -123,11 +123,11 @@ public class GoodsDetail {
         this.category_id = category_id;
     }
 
-    public int getBrand_id() {
+    public Long getBrand_id() {
         return brand_id;
     }
 
-    public void setBrand_id(int brand_id) {
+    public void setBrand_id(Long brand_id) {
         this.brand_id = brand_id;
     }
 
@@ -171,43 +171,43 @@ public class GoodsDetail {
         this.title = title;
     }
 
-    public int getMarket_price() {
+    public Long getMarket_price() {
         return market_price;
     }
 
-    public void setMarket_price(int market_price) {
+    public void setMarket_price(Long market_price) {
         this.market_price = market_price;
     }
 
-    public int getGuide_price() {
+    public Long getGuide_price() {
         return guide_price;
     }
 
-    public void setGuide_price(int guide_price) {
+    public void setGuide_price(Long guide_price) {
         this.guide_price = guide_price;
     }
 
-    public int getAgreement_price() {
+    public Long getAgreement_price() {
         return agreement_price;
     }
 
-    public void setAgreement_price(int agreement_price) {
+    public void setAgreement_price(Long agreement_price) {
         this.agreement_price = agreement_price;
     }
 
-    public int getActivity_price() {
+    public Long getActivity_price() {
         return activity_price;
     }
 
-    public void setActivity_price(int activity_price) {
+    public void setActivity_price(Long activity_price) {
         this.activity_price = activity_price;
     }
 
-    public int getActivity_rate() {
+    public Long getActivity_rate() {
         return activity_rate;
     }
 
-    public void setActivity_rate(int activity_rate) {
+    public void setActivity_rate(Long activity_rate) {
         this.activity_rate = activity_rate;
     }
 
@@ -219,99 +219,99 @@ public class GoodsDetail {
         this.cover = cover;
     }
 
-    public int getStock() {
+    public Long getStock() {
         return stock;
     }
 
-    public void setStock(int stock) {
+    public void setStock(Long stock) {
         this.stock = stock;
     }
 
-    public int getTotal_stock() {
+    public Long getTotal_stock() {
         return total_stock;
     }
 
-    public void setTotal_stock(int total_stock) {
+    public void setTotal_stock(Long total_stock) {
         this.total_stock = total_stock;
     }
 
-    public int getStatus() {
+    public Integer getStatus() {
         return status;
     }
 
-    public void setStatus(int status) {
+    public void setStatus(Integer status) {
         this.status = status;
     }
 
-    public int getSale() {
+    public Integer getSale() {
         return sale;
     }
 
-    public void setSale(int sale) {
+    public void setSale(Integer sale) {
         this.sale = sale;
     }
 
-    public int getReal_sale() {
+    public Integer getReal_sale() {
         return real_sale;
     }
 
-    public void setReal_sale(int real_sale) {
+    public void setReal_sale(Integer real_sale) {
         this.real_sale = real_sale;
     }
 
-    public int getReal_month_sale() {
+    public Integer getReal_month_sale() {
         return real_month_sale;
     }
 
-    public void setReal_month_sale(int real_month_sale) {
+    public void setReal_month_sale(Integer real_month_sale) {
         this.real_month_sale = real_month_sale;
     }
 
-    public int getReal_return_sale() {
+    public Integer getReal_return_sale() {
         return real_return_sale;
     }
 
-    public void setReal_return_sale(int real_return_sale) {
+    public void setReal_return_sale(Integer real_return_sale) {
         this.real_return_sale = real_return_sale;
     }
 
-    public int getReal_month_return_sale() {
+    public Integer getReal_month_return_sale() {
         return real_month_return_sale;
     }
 
-    public void setReal_month_return_sale(int real_month_return_sale) {
+    public void setReal_month_return_sale(Integer real_month_return_sale) {
         this.real_month_return_sale = real_month_return_sale;
     }
 
-    public int getCreated_time() {
+    public Integer getCreated_time() {
         return created_time;
     }
 
-    public void setCreated_time(int created_time) {
+    public void setCreated_time(Integer created_time) {
         this.created_time = created_time;
     }
 
-    public int getUpdated_time() {
+    public Integer getUpdated_time() {
         return updated_time;
     }
 
-    public void setUpdated_time(int updated_time) {
+    public void setUpdated_time(Integer updated_time) {
         this.updated_time = updated_time;
     }
 
-    public int getIs_free_shipping() {
+    public Integer getIs_free_shipping() {
         return is_free_shipping;
     }
 
-    public void setIs_free_shipping(int is_free_shipping) {
+    public void setIs_free_shipping(Integer is_free_shipping) {
         this.is_free_shipping = is_free_shipping;
     }
 
-    public int getChoose_count() {
+    public Integer getChoose_count() {
         return choose_count;
     }
 
-    public void setChoose_count(int choose_count) {
+    public void setChoose_count(Integer choose_count) {
         this.choose_count = choose_count;
     }
 
@@ -384,24 +384,24 @@ public class GoodsDetail {
              * sort : 0
              */
 
-            private int id;
-            private int goods_id;
+            private Long id;
+            private Long goods_id;
             private String name;
-            private int sort;
+            private Integer sort;
 
-            public int getId() {
+            public Long getId() {
                 return id;
             }
 
-            public void setId(int id) {
+            public void setId(Long id) {
                 this.id = id;
             }
 
-            public int getGoods_id() {
+            public Long getGoods_id() {
                 return goods_id;
             }
 
-            public void setGoods_id(int goods_id) {
+            public void setGoods_id(Long goods_id) {
                 this.goods_id = goods_id;
             }
 
@@ -413,13 +413,14 @@ public class GoodsDetail {
                 this.name = name;
             }
 
-            public int getSort() {
+            public Integer getSort() {
                 return sort;
             }
 
-            public void setSort(int sort) {
+            public void setSort(Integer sort) {
                 this.sort = sort;
             }
+
         }
 
         public static class ValuesBean implements Serializable {
@@ -431,33 +432,33 @@ public class GoodsDetail {
              * sort : 0
              */
 
-            private int id;
-            private int goods_id;
-            private int spec_name_id;
+            private Long id;
+            private Long goods_id;
+            private Long spec_name_id;
             private String name;
-            private int sort;
+            private Integer sort;
 
-            public int getId() {
+            public Long getId() {
                 return id;
             }
 
-            public void setId(int id) {
+            public void setId(Long id) {
                 this.id = id;
             }
 
-            public int getGoods_id() {
+            public Long getGoods_id() {
                 return goods_id;
             }
 
-            public void setGoods_id(int goods_id) {
+            public void setGoods_id(Long goods_id) {
                 this.goods_id = goods_id;
             }
 
-            public int getSpec_name_id() {
+            public Long getSpec_name_id() {
                 return spec_name_id;
             }
 
-            public void setSpec_name_id(int spec_name_id) {
+            public void setSpec_name_id(Long spec_name_id) {
                 this.spec_name_id = spec_name_id;
             }
 
@@ -469,11 +470,11 @@ public class GoodsDetail {
                 this.name = name;
             }
 
-            public int getSort() {
+            public Integer getSort() {
                 return sort;
             }
 
-            public void setSort(int sort) {
+            public void setSort(Integer sort) {
                 this.sort = sort;
             }
         }
@@ -495,41 +496,41 @@ public class GoodsDetail {
              * status : 0
              */
 
-            private int id;
-            private int goods_id;
-            private int third_id;
+            private Long id;
+            private Long goods_id;
+            private Long third_id;
             private String spec_value_ids;
             private String spec_value_names;
-            private int market_price;
-            private int guide_price;
-            private int activity_price;
-            private int agreement_price;
-            private int stock;
-            private int weight;
+            private Long market_price;
+            private Long guide_price;
+            private Long activity_price;
+            private Long agreement_price;
+            private Long stock;
+            private Integer weight;
             private String image;
-            private int status;
+            private Integer status;
 
-            public int getId() {
+            public Long getId() {
                 return id;
             }
 
-            public void setId(int id) {
+            public void setId(Long id) {
                 this.id = id;
             }
 
-            public int getGoods_id() {
+            public Long getGoods_id() {
                 return goods_id;
             }
 
-            public void setGoods_id(int goods_id) {
+            public void setGoods_id(Long goods_id) {
                 this.goods_id = goods_id;
             }
 
-            public int getThird_id() {
+            public Long getThird_id() {
                 return third_id;
             }
 
-            public void setThird_id(int third_id) {
+            public void setThird_id(Long third_id) {
                 this.third_id = third_id;
             }
 
@@ -549,51 +550,51 @@ public class GoodsDetail {
                 this.spec_value_names = spec_value_names;
             }
 
-            public int getMarket_price() {
+            public Long getMarket_price() {
                 return market_price;
             }
 
-            public void setMarket_price(int market_price) {
+            public void setMarket_price(Long market_price) {
                 this.market_price = market_price;
             }
 
-            public int getGuide_price() {
+            public Long getGuide_price() {
                 return guide_price;
             }
 
-            public void setGuide_price(int guide_price) {
+            public void setGuide_price(Long guide_price) {
                 this.guide_price = guide_price;
             }
 
-            public int getActivity_price() {
+            public Long getActivity_price() {
                 return activity_price;
             }
 
-            public void setActivity_price(int activity_price) {
+            public void setActivity_price(Long activity_price) {
                 this.activity_price = activity_price;
             }
 
-            public int getAgreement_price() {
+            public Long getAgreement_price() {
                 return agreement_price;
             }
 
-            public void setAgreement_price(int agreement_price) {
+            public void setAgreement_price(Long agreement_price) {
                 this.agreement_price = agreement_price;
             }
 
-            public int getStock() {
+            public Long getStock() {
                 return stock;
             }
 
-            public void setStock(int stock) {
+            public void setStock(Long stock) {
                 this.stock = stock;
             }
 
-            public int getWeight() {
+            public Integer getWeight() {
                 return weight;
             }
 
-            public void setWeight(int weight) {
+            public void setWeight(Integer weight) {
                 this.weight = weight;
             }
 
@@ -605,13 +606,17 @@ public class GoodsDetail {
                 this.image = image;
             }
 
-            public int getStatus() {
+            public Integer getStatus() {
                 return status;
             }
 
-            public void setStatus(int status) {
+            public void setStatus(Integer status) {
                 this.status = status;
             }
         }
+
+
+
+
     }
 }

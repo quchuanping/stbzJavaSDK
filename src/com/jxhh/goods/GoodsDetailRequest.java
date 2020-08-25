@@ -16,18 +16,14 @@ import com.jxhh.res.ApiResultObject;
  */
 public class GoodsDetailRequest implements InterFaceRequest {
 
-	private Integer id;
+	private Long id;
 
-	
-	public Integer getId() {
+
+	public Long getId() {
 		return id;
 	}
 
-	/**
-	 * 设置商品ID
-	 * @param id
-	 */
-	public void setId(Integer id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 

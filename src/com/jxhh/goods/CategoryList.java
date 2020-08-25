@@ -18,37 +18,37 @@ public class CategoryList {
      * source : 2
      */
 
-    private int id;
-    private int third_id;
-    private int parent_id;
+    private Long id;
+    private Integer third_id;
+    private Integer parent_id;
     private String title;
-    private int level;
-    private int state;
-    private int create_time;
-    private int sort;
-    private int source;
+    private Integer level;
+    private Integer state;
+    private Integer create_time;
+    private Integer sort;
+    private Integer source;
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
-    public int getThird_id() {
+    public Integer getThird_id() {
         return third_id;
     }
 
-    public void setThird_id(int third_id) {
+    public void setThird_id(Integer third_id) {
         this.third_id = third_id;
     }
 
-    public int getParent_id() {
+    public Integer getParent_id() {
         return parent_id;
     }
 
-    public void setParent_id(int parent_id) {
+    public void setParent_id(Integer parent_id) {
         this.parent_id = parent_id;
     }
 
@@ -60,43 +60,43 @@ public class CategoryList {
         this.title = title;
     }
 
-    public int getLevel() {
+    public Integer getLevel() {
         return level;
     }
 
-    public void setLevel(int level) {
+    public void setLevel(Integer level) {
         this.level = level;
     }
 
-    public int getState() {
+    public Integer getState() {
         return state;
     }
 
-    public void setState(int state) {
+    public void setState(Integer state) {
         this.state = state;
     }
 
-    public int getCreate_time() {
+    public Integer getCreate_time() {
         return create_time;
     }
 
-    public void setCreate_time(int create_time) {
+    public void setCreate_time(Integer create_time) {
         this.create_time = create_time;
     }
 
-    public int getSort() {
+    public Integer getSort() {
         return sort;
     }
 
-    public void setSort(int sort) {
+    public void setSort(Integer sort) {
         this.sort = sort;
     }
 
-    public int getSource() {
+    public Integer getSource() {
         return source;
     }
 
-    public void setSource(int source) {
+    public void setSource(Integer source) {
         this.source = source;
     }
 }

@@ -6,13 +6,13 @@ public class GoodsStorage {
      * total : 609
      */
 
-    private int total;
+    private Long total;
 
-    public int getTotal() {
+    public Long getTotal() {
         return total;
     }
 
-    public void setTotal(int total) {
+    public void setTotal(Long total) {
         this.total = total;
     }
 }
