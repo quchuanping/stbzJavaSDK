@@ -32,7 +32,7 @@ public class AfterServiceList {
     private String orderSn3;
     private String orderSn;
     private Long sku;
-    private Integer num;
+    private Long num;
     private Long goodsFee;
     private Long logisticFee;
     private String serviceTypeCode;
@@ -107,11 +107,11 @@ public class AfterServiceList {
         this.sku = sku;
     }
 
-    public Integer getNum() {
+    public Long getNum() {
         return num;
     }
 
-    public void setNum(int num) {
+    public void setNum(Long num) {
         this.num = num;
     }
 
