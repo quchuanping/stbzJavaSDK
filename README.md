@@ -196,8 +196,15 @@ SDK基本用法示例
                 System.out.println("补单成功");
             }
 
+            // 失败退单
+            OrderErrorRefund orderErrorRefund = new OrderErrorRefund();
+            orderErrorRefund.setOrderSn("");//二级订单号
+            ApiResponse apiResponse = apiClient.exec(orderErrorRefund);
+            if(1 == apiResponse.getCode()){
+                System.out.println("成功");
+            }
 
-            //  订单列表
+            //  全平台订单列表
             OrderListRequest orderListRequest = new OrderListRequest();
             OrderListRequest.Search oredrSearch = new OrderListRequest.Search();
             // oredrSearch.setGoodsName("护肤");
@@ -209,9 +216,18 @@ SDK基本用法示例
             OrderList orderList = orderToList.get(0);
             System.out.println(orderList.getAddress().getConsignee());
             System.out.println(orderList.getChildren().get(0).getGoods().get(0).getSkuName());
+            
+            
+            //分平台订单
+            SubOrderListRequest subOrderListRequest = new SubOrderListRequest();
+            subOrderListRequest.setSource(2);
+            subOrderListRequest.setPage(1);
+            subOrderListRequest.setLimit(1);
+            ApiResponse<SubOrderList> apiResponse = apiClient.exec(subOrderListRequest);
+            System.out.println(apiResponse.getLists().get(0).getAddress().getConsignee());
 
 
-              // 订单详情
+            // 订单详情
             OrderDetailRequest orderDetailRequest = new OrderDetailRequest();
             orderDetailRequest.setSn("20200622151646241976_2_1_1"); //三级订单号
             ApiResponse<OrderDetail> apiResponse43 = apiClient.exec(orderDetailRequest);
@@ -239,7 +255,6 @@ SDK基本用法示例
 
             //物流公司列表
             OrderLogisticFirmsRequest orderLogisticFirmsRequest = new OrderLogisticFirmsRequest();
-
             ApiResponse<OrderLogisticFirms> apiResponse7 = apiClient.exec(orderLogisticFirmsRequest);
             List<OrderLogisticFirms> listOrderLogisticFirms = apiResponse7.getLists();
             OrderLogisticFirms orderLogisticFirms = listOrderLogisticFirms.get(0);
@@ -255,6 +270,7 @@ SDK基本用法示例
             GoodsStorage goodsStorage = apiResponse8.getObject();
             System.out.println(apiResponse8.getCode());
             System.out.println(goodsStorage.getTotal());
+
 
             //我的选品库列表
             GoodsStorageListRequest goodsStorageListRequest = new GoodsStorageListRequest();
@@ -278,16 +294,62 @@ SDK基本用法示例
             System.out.println(apiResponse10.getCode());
             System.out.println(goodsStorage2.getTotal());
 
-
-
             //清空选品库 执行此操作选品库所有产品会被删除 ******谨慎操作******
             GoodsStorageClearRequest goodsStorageClearRequest = new GoodsStorageClearRequest();
-
             ApiResponse<GoodsStorage> apiResponse11 = apiClient.exec(goodsStorageClearRequest);
             if(1 == apiResponse11.getCode()){
                 System.out.println("清空成功");
             }
             
+            
+            //售后校验
+            BeforeCheckRequest beforeCheckRequest = new BeforeCheckRequest();
+            beforeCheckRequest.setOrderSn("ME20200824141843646823");
+            beforeCheckRequest.setSku((long)9778319);
+            ApiResponse<BeforeCheck> apiResponse =  apiClient.exec(beforeCheckRequest);
+            BeforeCheck beforeCheck = apiResponse.getObject();
+            System.out.println(beforeCheck.getReasonsType().get(0).getName());
+            
+            
+             //申请售后
+            AfterServiceApplyRequest afterServiceApplyRequest = new AfterServiceApplyRequest();
+            afterServiceApplyRequest.setOrderSn("20200610111116");
+            afterServiceApplyRequest.setSku((long)2033490);
+            afterServiceApplyRequest.setNum((long)1);
+            afterServiceApplyRequest.setLogisticFee((long)10);
+            afterServiceApplyRequest.setServiceTypeCode("50");
+            afterServiceApplyRequest.setReasonsDescription("不想要了");
+            
+            
+            
+            //售后上传图片
+            AfterServiceUploadRequest afterServiceUploadRequest = new AfterServiceUploadRequest();
+            String pic = new String("图片base64原始数据，不要描述部分,参考base64img.txt");
+            List<String> list = new ArrayList<>();
+            list.add(pic);
+            afterServiceUploadRequest.setPictures(list);
+            afterServiceUploadRequest.setSku((long)9604070);
+            afterServiceUploadRequest.setOrderSn("SN20200813181909lZ");
+            ApiResponse<AfterServiceUpload> apiResponse1 = apiClient.exec(afterServiceUploadRequest);
+            System.out.println(apiResponse1.getObject().getUrls().get(0));
+            
+            
+            
+            //售后列表
+            AfterServiceListRequest afterServiceListRequest = new AfterServiceListRequest();
+            afterServiceListRequest.setPage(1);
+            afterServiceListRequest.setLimit(10);
+            ApiResponse<AfterServiceList> apiResponse = apiClient.exec(afterServiceListRequest);
+            System.out.println(apiResponse.getLists().get(0).getOrderSn());
+        
+            
+
+            //售后详情
+            AfterServiceDetailRequest afterSerViceDetailRequest = new AfterServiceDetailRequest();
+            afterSerViceDetailRequest.setId((long)67);
+            ApiResponse<AfterServiceDetail> apiResponse = apiClient.exec(afterSerViceDetailRequest);
+            System.out.println(apiResponse.getObject().getId());
+
             
             
         //消息处理
