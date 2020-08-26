@@ -1,7 +1,9 @@
 package com.jxhh.afterService;
 
+import com.google.gson.reflect.TypeToken;
 import com.jxhh.InterFaceRequest;
 import com.jxhh.exception.MustParamsException;
+import com.jxhh.res.ApiResultObject;
 
 import java.lang.reflect.Type;
 import java.util.TreeMap;
@@ -10,15 +12,15 @@ import java.util.TreeMap;
  *
  * 售后详情
  */
-public class AfterSerViceDetailRequest implements InterFaceRequest {
+public class AfterServiceDetailRequest implements InterFaceRequest {
 
-    private Integer id;
+    private Long id;
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -35,10 +37,9 @@ public class AfterSerViceDetailRequest implements InterFaceRequest {
     @Override
     public TreeMap<String, Object> getParams() throws MustParamsException {
 
-//        if(null == getId()) throw new MustParamsException("对象"+getClass()+": id不能为空");
-//
+        if(null == getId()) throw new MustParamsException("对象"+getClass()+": id不能为空");
         TreeMap<String,Object> params = new TreeMap<>();
-//        params.put("id",getId());
+        params.put("id",getId());
         return params;
     }
 
@@ -49,6 +50,6 @@ public class AfterSerViceDetailRequest implements InterFaceRequest {
 
     @Override
     public Type getJsonClassType() {
-        return null;
+        return new TypeToken<ApiResultObject<AfterServiceDetail>>() {}.getType();
     }
 }

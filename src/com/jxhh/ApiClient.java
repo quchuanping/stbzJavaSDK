@@ -44,7 +44,7 @@ public class ApiClient {
 	
 	private String sign(TreeMap<String, Object> params,String json){
 		
-		String signStr = "";
+		String signStr = new String();
 		for(String key : params.keySet()) {
 			signStr = signStr + key + params.get(key);
 		}

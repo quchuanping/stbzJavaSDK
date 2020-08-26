@@ -7,6 +7,7 @@ import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPatch;
 import org.apache.http.client.methods.HttpPost;
+import org.apache.http.client.methods.HttpPut;
 import org.apache.http.entity.ContentType;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.CloseableHttpClient;
@@ -99,6 +100,28 @@ public class HttpClient{
 		responseString = responseString = EntityUtils.toString(httpResponse.getEntity(), "UTF-8");
 		httpClient.close();
 		return responseString;
+	}
+
+
+	public static final String put(String url, String jsonBody, Map<String,String> headers) throws IOException {
+
+
+		CloseableHttpClient httpClient = HttpClients.createDefault();
+
+		HttpPut httpPut = new HttpPut(url);
+		headers = pushHeader(headers);
+		for(String key : headers.keySet()) {
+			httpPut.setHeader(key,headers.get(key));
+		}
+		HttpEntity httpEntity = new StringEntity(jsonBody, ContentType.APPLICATION_JSON);
+		httpPut.setEntity(httpEntity);
+
+		String responseString = "";
+		HttpResponse httpResponse = httpClient.execute(httpPut);
+		responseString = responseString = EntityUtils.toString(httpResponse.getEntity(), "UTF-8");
+		httpClient.close();
+		return responseString;
+
 	}
 
 
