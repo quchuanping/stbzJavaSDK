@@ -4,6 +4,7 @@ import com.google.gson.reflect.TypeToken;
 import com.jxhh.InterFaceRequest;
 import com.jxhh.exception.MustParamsException;
 import com.jxhh.res.ApiResultList;
+import com.jxhh.res.ApiResultObject;
 
 import java.lang.reflect.Type;
 import java.util.TreeMap;
@@ -57,11 +58,11 @@ public class OrderLogisticRequest implements InterFaceRequest {
 
     @Override
     public Integer getResponseType() {
-        return 1;
+        return 0;
     }
 
     @Override
     public Type getJsonClassType() {
-        return new TypeToken<ApiResultList<OrderLogistic>>() {}.getType();
+        return new TypeToken<ApiResultObject<OrderLogistic>>() {}.getType();
     }
 }

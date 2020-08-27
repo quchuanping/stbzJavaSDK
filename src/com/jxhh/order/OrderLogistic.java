@@ -1,5 +1,7 @@
 package com.jxhh.order;
 
+import java.util.List;
+
 /**
  *
  * 物流信息返回
@@ -7,37 +9,23 @@ package com.jxhh.order;
 public class OrderLogistic {
 
 
-    /**
-     * message : 温馨提示：您的订单预计6月11日09:00-15:00送达您手中
-     * source : 系统
-     * time : 1591758681
-     */
+    private List<OrderLogisticList> list;
 
-    private String message;
-    private String source;
-    private Integer time;
+    private OrderLogisticInfo info;
 
-    public String getMessage() {
-        return message;
+    public List<OrderLogisticList> getList() {
+        return list;
     }
 
-    public void setMessage(String message) {
-        this.message = message;
+    public void setList(List<OrderLogisticList> list) {
+        this.list = list;
     }
 
-    public String getSource() {
-        return source;
+    public OrderLogisticInfo getInfo() {
+        return info;
     }
 
-    public void setSource(String source) {
-        this.source = source;
-    }
-
-    public Integer getTime() {
-        return time;
-    }
-
-    public void setTime(Integer time) {
-        this.time = time;
+    public void setInfo(OrderLogisticInfo info) {
+        this.info = info;
     }
 }

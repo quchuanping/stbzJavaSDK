@@ -84,6 +84,42 @@ public class OrderListRequest implements InterFaceRequest {
     public static class Search{
 
         private String goodsName;
+        private String consignee;
+        private String phone;
+        private String thirdSn;
+        private String sn;
+
+        public String getConsignee() {
+            return consignee;
+        }
+
+        public void setConsignee(String consignee) {
+            this.consignee = consignee;
+        }
+
+        public String getPhone() {
+            return phone;
+        }
+
+        public void setPhone(String phone) {
+            this.phone = phone;
+        }
+
+        public String getThirdSn() {
+            return thirdSn;
+        }
+
+        public void setThirdSn(String thirdSn) {
+            this.thirdSn = thirdSn;
+        }
+
+        public String getSn() {
+            return sn;
+        }
+
+        public void setSn(String sn) {
+            this.sn = sn;
+        }
 
         public String getGoodsName() {
             return goodsName;
