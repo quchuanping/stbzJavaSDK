@@ -242,15 +242,15 @@ SDK基本用法示例
             ApiResponse apiResponse44 = apiClient.exec(orderErrorListRequest);
 
 
-         // 查询物流
-        OrderLogisticRequest orderLogisticRequest = new OrderLogisticRequest();
-        orderLogisticRequest.setOrderSn("SH20200622151638351628");
-        orderLogisticRequest.setSku((long)9054);
+             // 查询物流
+            OrderLogisticRequest orderLogisticRequest = new OrderLogisticRequest();
+            orderLogisticRequest.setOrderSn("SH20200622151638351628");
+            orderLogisticRequest.setSku((long)9054);
 
-        ApiResponse<OrderLogistic> apiResponse6 = apiClient.exec(orderLogisticRequest);
-        OrderLogistic orderLogistic = apiResponse6.getObject();
-        System.out.println(orderLogistic.getInfo().getName());
-        System.out.println(orderLogistic.getInfo().getNo());
+            ApiResponse<OrderLogistic> apiResponse6 = apiClient.exec(orderLogisticRequest);
+            OrderLogistic orderLogistic = apiResponse6.getObject();
+            System.out.println(orderLogistic.getInfo().getName());
+            System.out.println(orderLogistic.getInfo().getNo());
 
 
 
