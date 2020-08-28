@@ -1,6 +1,5 @@
 package com.jxhh.goods;
 
-import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -21,11 +20,13 @@ public class GoodsDetail {
      * unit : 包
      * origin : 中国大陆
      * title : 润本（RUNBEN）香皂 儿童香皂 150g×3包 洗衣皂 婴儿洗衣皂 肥皂婴儿 尿布皂（香型随机发货）
-     * market_price : 7200
-     * guide_price : 2290
-     * agreement_price : 2405
-     * activity_price : 2290
-     * activity_rate : 0
+     * market_price : 0
+     * guide_price : 0
+     * agreement_price : 0
+     * activity_price : 0
+     * sale_price : 0
+     * cost_price : 0
+     * activity_rate : -2147483648
      * cover : https://img13.360buyimg.com/n0/jfs/t1/58116/6/10147/147489/5d77308dEc655b240/a4dc06786b433284.jpg
      * stock : 9999
      * total_stock : 9999
@@ -36,17 +37,13 @@ public class GoodsDetail {
      * real_return_sale : 0
      * real_month_return_sale : 0
      * created_time : 1562767987
-     * updated_time : 1591598917
+     * updated_time : 1598551627
      * is_free_shipping : 0
-     * choose_count : 0
-     * description : <div skucode="100010"></div><div style="text-align:center;">
-     <div style="text-align:center;">
-     <img src="//img30.360buyimg.com/sku/jfs/t1/82842/29/9396/175413/5d70be26E032f2ffb/7d22aa7eba3dcea0.jpg" width="790" height="1067" alt="" /><img src="//img30.360buyimg.com/sku/jfs/t1/46105/15/9592/129348/5d6cc339E4fbdd76b/dd4824a891f96919.jpg" width="790" height="652" alt="" /><img src="//img30.360buyimg.com/sku/jfs/t1/84189/3/8911/236771/5d6cbb5fE8801eeca/12c74998f0b0e7e6.jpg" width="790" height="1126" alt="" /><img src="//img30.360buyimg.com/sku/jfs/t1/75483/35/8959/140313/5d6cbb84E86284925/f7b6e0e67405da57.jpg" width="790" height="936" alt="" /><img src="//img30.360buyimg.com/sku/jfs/t1/60413/33/8933/140649/5d6cbb8dE0f3ff7c8/7ee9149f5cda1944.jpg" width="790" height="934" alt="" /><img src="//img30.360buyimg.com/sku/jfs/t1/79294/29/8882/141749/5d6cbba4E36b1add0/7da2e2c3f3b89b3b.jpg" width="790" height="1087" alt="" /><img src="//img30.360buyimg.com/sku/jfs/t1/46954/24/9464/94200/5d6cbbabE4b0be630/fb97db7364a33f2f.jpg" width="790" height="741" alt="" /><img src="//img30.360buyimg.com/sku/jfs/t1/65749/6/8970/80982/5d6cbbb4E887817a5/2a6caa7920153cf3.jpg" width="790" height="590" alt="" /><img src="//img30.360buyimg.com/sku/jfs/t1/63738/28/8275/95660/5d65fb28E22d3fa2e/e0ce5386c6a03903.jpg" width="790" height="1042" alt="" /><img src="//img30.360buyimg.com/sku/jfs/t1/56765/14/8996/146003/5d65fb21Ee4280704/8d96e962de049563.jpg" width="790" height="671" alt="" />
-     </div>
-     </div>
+     * choose_count : 2
+     * description : <p><img src="//img30.360buyimg.com/sku/jfs/t1/82842/29/9396/175413/5d70be26E032f2ffb/7d22aa7eba3dcea0.jpg" width="100%" alt="图片破损" style=""/></p><p><img src="//img30.360buyimg.com/sku/jfs/t1/46105/15/9592/129348/5d6cc339E4fbdd76b/dd4824a891f96919.jpg" width="100%" alt="图片破损" style=""/></p><p><img src="//img30.360buyimg.com/sku/jfs/t1/84189/3/8911/236771/5d6cbb5fE8801eeca/12c74998f0b0e7e6.jpg" width="100%" alt="图片破损" style=""/></p><p><img src="//img30.360buyimg.com/sku/jfs/t1/75483/35/8959/140313/5d6cbb84E86284925/f7b6e0e67405da57.jpg" width="100%" alt="图片破损" style=""/></p><p><img src="//img30.360buyimg.com/sku/jfs/t1/60413/33/8933/140649/5d6cbb8dE0f3ff7c8/7ee9149f5cda1944.jpg" width="100%" alt="图片破损" style=""/></p><p><img src="//img30.360buyimg.com/sku/jfs/t1/79294/29/8882/141749/5d6cbba4E36b1add0/7da2e2c3f3b89b3b.jpg" width="100%" alt="图片破损" style=""/></p><p><img src="//img30.360buyimg.com/sku/jfs/t1/46954/24/9464/94200/5d6cbbabE4b0be630/fb97db7364a33f2f.jpg" width="100%" alt="图片破损" style=""/></p><p><img src="//img30.360buyimg.com/sku/jfs/t1/65749/6/8970/80982/5d6cbbb4E887817a5/2a6caa7920153cf3.jpg" width="100%" alt="图片破损" style=""/></p><p><img src="//img30.360buyimg.com/sku/jfs/t1/63738/28/8275/95660/5d65fb28E22d3fa2e/e0ce5386c6a03903.jpg" width="100%" alt="图片破损" style=""/></p><p><img src="//img30.360buyimg.com/sku/jfs/t1/56765/14/8996/146003/5d65fb21Ee4280704/8d96e962de049563.jpg" width="100%" alt="图片破损" style=""/></p>
      * covers : ["https://img13.360buyimg.com/n0/jfs/t1/58116/6/10147/147489/5d77308dEc655b240/a4dc06786b433284.jpg","https://img13.360buyimg.com/n0/jfs/t1/57514/31/9582/305789/5d6ccc1cEe50ae119/c8c98fc21313a824.jpg","https://img13.360buyimg.com/n0/jfs/t1/80462/6/9120/164122/5d6ccc27E4b8091b9/c396f36b74402963.jpg","https://img13.360buyimg.com/n0/jfs/t1/58185/7/8932/89067/5d6ccc2bEb3b7789d/a6b5110614790048.jpg","https://img13.360buyimg.com/n0/jfs/t1/103745/25/574/157576/5db1122fE545992d0/9431881660333310.jpg"]
      * attributes : []
-     * specs : {"names":[{"id":10354,"goods_id":10362,"name":"默认","sort":0}],"values":[{"id":10354,"goods_id":10362,"spec_name_id":10354,"name":"默认","sort":0}],"options":[{"id":10349,"goods_id":10362,"third_id":5923054,"spec_value_ids":"10354","spec_value_names":"默认","market_price":7200,"guide_price":2290,"activity_price":2290,"agreement_price":2405,"stock":0,"weight":0,"image":"https://img13.360buyimg.com/n0/jfs/t1/58116/6/10147/147489/5d77308dEc655b240/a4dc06786b433284.jpg","status":0}]}
+     * specs : {"names":[{"id":11417989,"goods_id":10362,"name":"默认","sort":0}],"values":[{"id":33154022,"goods_id":10362,"name":"默认","sort":0,"spec_name_id":11417989}],"options":[{"id":10349,"third_id":5923054,"goods_id":10362,"spec_value_ids":"33154022","spec_value_names":"默认","market_price":7200,"guide_price":2290,"activity_price":2290,"agreement_price":2290,"sale_price":2290,"cost_price":2290,"stock":0,"weight":0,"image":"https://img13.360buyimg.com/n1/jfs/t1/58116/6/10147/147489/5d77308dEc655b240/a4dc06786b433284.jpg","old_goods_id":10362,"status":0}]}
      */
 
     private Long id;
@@ -64,6 +61,8 @@ public class GoodsDetail {
     private Long guide_price;
     private Long agreement_price;
     private Long activity_price;
+    private Long sale_price;
+    private Long cost_price;
     private Long activity_rate;
     private String cover;
     private Long stock;
@@ -77,7 +76,7 @@ public class GoodsDetail {
     private Integer created_time;
     private Integer updated_time;
     private Integer is_free_shipping;
-    private Integer choose_count;
+    private Long choose_count;
     private String description;
     private SpecsBean specs;
     private List<String> covers;
@@ -203,6 +202,22 @@ public class GoodsDetail {
         this.activity_price = activity_price;
     }
 
+    public Long getSale_price() {
+        return sale_price;
+    }
+
+    public void setSale_price(Long sale_price) {
+        this.sale_price = sale_price;
+    }
+
+    public Long getCost_price() {
+        return cost_price;
+    }
+
+    public void setCost_price(Long cost_price) {
+        this.cost_price = cost_price;
+    }
+
     public Long getActivity_rate() {
         return activity_rate;
     }
@@ -307,11 +322,11 @@ public class GoodsDetail {
         this.is_free_shipping = is_free_shipping;
     }
 
-    public Integer getChoose_count() {
+    public Long getChoose_count() {
         return choose_count;
     }
 
-    public void setChoose_count(Integer choose_count) {
+    public void setChoose_count(Long choose_count) {
         this.choose_count = choose_count;
     }
 
@@ -347,9 +362,43 @@ public class GoodsDetail {
         this.attributes = attributes;
     }
 
-    public static class SpecsBean implements Serializable {
+    public static class SpecsBean {
+        /**
+         * id : 11417989
+         * goods_id : 10362
+         * name : 默认
+         * sort : 0
+         */
+
         private List<NamesBean> names;
+        /**
+         * id : 33154022
+         * goods_id : 10362
+         * name : 默认
+         * sort : 0
+         * spec_name_id : 11417989
+         */
+
         private List<ValuesBean> values;
+        /**
+         * id : 10349
+         * third_id : 5923054
+         * goods_id : 10362
+         * spec_value_ids : 33154022
+         * spec_value_names : 默认
+         * market_price : 7200
+         * guide_price : 2290
+         * activity_price : 2290
+         * agreement_price : 2290
+         * sale_price : 2290
+         * cost_price : 2290
+         * stock : 0
+         * weight : 0
+         * image : https://img13.360buyimg.com/n1/jfs/t1/58116/6/10147/147489/5d77308dEc655b240/a4dc06786b433284.jpg
+         * old_goods_id : 10362
+         * status : 0
+         */
+
         private List<OptionsBean> options;
 
         public List<NamesBean> getNames() {
@@ -376,14 +425,7 @@ public class GoodsDetail {
             this.options = options;
         }
 
-        public static class NamesBean implements Serializable {
-            /**
-             * id : 10354
-             * goods_id : 10362
-             * name : 默认
-             * sort : 0
-             */
-
+        public static class NamesBean {
             private Long id;
             private Long goods_id;
             private String name;
@@ -420,23 +462,14 @@ public class GoodsDetail {
             public void setSort(Integer sort) {
                 this.sort = sort;
             }
-
         }
 
-        public static class ValuesBean implements Serializable {
-            /**
-             * id : 10354
-             * goods_id : 10362
-             * spec_name_id : 10354
-             * name : 默认
-             * sort : 0
-             */
-
+        public static class ValuesBean {
             private Long id;
             private Long goods_id;
-            private Long spec_name_id;
             private String name;
             private Integer sort;
+            private Long spec_name_id;
 
             public Long getId() {
                 return id;
@@ -452,6 +485,22 @@ public class GoodsDetail {
 
             public void setGoods_id(Long goods_id) {
                 this.goods_id = goods_id;
+            }
+
+            public String getName() {
+                return name;
+            }
+
+            public void setName(String name) {
+                this.name = name;
+            }
+
+            public Integer getSort() {
+                return sort;
+            }
+
+            public void setSort(Integer sort) {
+                this.sort = sort;
             }
 
             public Long getSpec_name_id() {
@@ -462,52 +511,24 @@ public class GoodsDetail {
                 this.spec_name_id = spec_name_id;
             }
 
-            public String getName() {
-                return name;
-            }
-
-            public void setName(String name) {
-                this.name = name;
-            }
-
-            public Integer getSort() {
-                return sort;
-            }
-
-            public void setSort(Integer sort) {
-                this.sort = sort;
-            }
         }
 
-        public static class OptionsBean implements Serializable {
-            /**
-             * id : 10349
-             * goods_id : 10362
-             * third_id : 5923054
-             * spec_value_ids : 10354
-             * spec_value_names : 默认
-             * market_price : 7200
-             * guide_price : 2290
-             * activity_price : 2290
-             * agreement_price : 2405
-             * stock : 0
-             * weight : 0
-             * image : https://img13.360buyimg.com/n0/jfs/t1/58116/6/10147/147489/5d77308dEc655b240/a4dc06786b433284.jpg
-             * status : 0
-             */
-
+        public static class OptionsBean {
             private Long id;
-            private Long goods_id;
             private Long third_id;
+            private Long goods_id;
             private String spec_value_ids;
             private String spec_value_names;
             private Long market_price;
             private Long guide_price;
             private Long activity_price;
             private Long agreement_price;
+            private Long sale_price;
+            private Long cost_price;
             private Long stock;
             private Integer weight;
             private String image;
+            private Long old_goods_id;
             private Integer status;
 
             public Long getId() {
@@ -518,20 +539,20 @@ public class GoodsDetail {
                 this.id = id;
             }
 
-            public Long getGoods_id() {
-                return goods_id;
-            }
-
-            public void setGoods_id(Long goods_id) {
-                this.goods_id = goods_id;
-            }
-
             public Long getThird_id() {
                 return third_id;
             }
 
             public void setThird_id(Long third_id) {
                 this.third_id = third_id;
+            }
+
+            public Long getGoods_id() {
+                return goods_id;
+            }
+
+            public void setGoods_id(Long goods_id) {
+                this.goods_id = goods_id;
             }
 
             public String getSpec_value_ids() {
@@ -582,6 +603,22 @@ public class GoodsDetail {
                 this.agreement_price = agreement_price;
             }
 
+            public Long getSale_price() {
+                return sale_price;
+            }
+
+            public void setSale_price(Long sale_price) {
+                this.sale_price = sale_price;
+            }
+
+            public Long getCost_price() {
+                return cost_price;
+            }
+
+            public void setCost_price(Long cost_price) {
+                this.cost_price = cost_price;
+            }
+
             public Long getStock() {
                 return stock;
             }
@@ -606,6 +643,14 @@ public class GoodsDetail {
                 this.image = image;
             }
 
+            public Long getOld_goods_id() {
+                return old_goods_id;
+            }
+
+            public void setOld_goods_id(Long old_goods_id) {
+                this.old_goods_id = old_goods_id;
+            }
+
             public Integer getStatus() {
                 return status;
             }
@@ -614,9 +659,5 @@ public class GoodsDetail {
                 this.status = status;
             }
         }
-
-
-
-
     }
 }

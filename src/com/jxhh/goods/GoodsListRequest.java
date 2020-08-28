@@ -15,6 +15,8 @@ import java.util.TreeMap;
  */
 public class GoodsListRequest implements InterFaceRequest{
 
+
+
 	private Integer page;
 	
 	private Integer limit;

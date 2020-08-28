@@ -1,5 +1,7 @@
 package com.jxhh.goods;
 
+import groovy.beans.Bindable;
+
 import java.util.List;
 
 /**
@@ -9,49 +11,57 @@ public class GoodsList {
 
 
 	/**
-	 * third_category_name : 其他时尚女包
-	 * sale : 9
-	 * market_price : 7900
-	 * activity_rate : -4.75
+	 * third_category_name : 厨具,水具酒具,塑料杯
+	 * sale : 0
+	 * market_price : 5990
+	 * activity_rate : 896.71
 	 * real_month_sale : 0
-	 * id : 227063
+	 * id : 1463353
 	 * unit : 个
-	 * type : goods
-	 * total_stock : 0
-	 * activity_price : 0
-	 * created_time : 1578069284
-	 * dis_category_id : 5335-7885-8146
-	 * source : 6
-	 * cover : http://cbu01.alicdn.com/img/ibank/2018/121/646/8806646121_423599647.jpg
+	 * total_stock : 9999
+	 * activity_price : 2990
+	 * created_time : 1597346918
+	 * dis_category_id : 14330-11580-9989
+	 * source : 2
+	 * cover : https://img13.360buyimg.com/n0/jfs/t4555/131/1400044514/101858/6d6e1edf/58de143bNe0603e93.jpg
 	 * status : 1
 	 * is_free_shipping : 0
-	 * brand_id : 18840
-	 * agreement_price : 557
-	 * stock : 7170598
-	 * third_brand_name : 其他
-	 * choose_count : 41
-	 * real_sale : 11
-	 * shop_id : 52533
-	 * third_id : 554631026487
-	 * updated_time : 1591171132
-	 * guide_price : 5800
-	 * origin :
+	 * brand_id : 17095
+	 * agreement_price : 300
+	 * stock : 9999
+	 * third_brand_name : 优道
+	 * choose_count : 29
+	 * real_sale : 0
+	 * shop_id : 40054
+	 * third_id : 4017871
+	 * updated_time : 1598574031
+	 * guide_price : 2990
+	 * sale_price : 2990
+	 * cost_price : 300
+	 * origin : 广东佛山
 	 * real_return_sale : 0
 	 * real_month_return_sale : 0
-	 * title : 2018活动爆款范冰冰同款双肩包韩版时尚尼龙背包女包厂家直销
-	 * rate : 942.19
-	 * category_ids : ["1042954","124016002","124676002"]
+	 * title : 新加坡UNIBOTT优道茶隔创意塑料茶漏 茶叶过滤器滤网 保温杯水杯配件 品质黑
+	 * rate : 896.71
+	 * category_ids : ["6196","6219","6220"]
+	 * category_id : 6196-6219-6220
+	 * promotion_rate : 0
+	 * is_selected : 0
+	 * is_black : 0
+	 * seller_id : 0
+	 * channel_id : 0
+	 * activity_ids : 0
+	 * is_risk : 0
 	 */
 
 	private String third_category_name;
 	private Integer sale;
-	private Integer market_price;
+	private Long market_price;
 	private Double activity_rate;
 	private Integer real_month_sale;
 	private Long id;
 	private String unit;
-	private String type;
-	private Integer total_stock;
+	private Long total_stock;
 	private Long activity_price;
 	private Integer created_time;
 	private String dis_category_id;
@@ -59,21 +69,32 @@ public class GoodsList {
 	private String cover;
 	private Integer status;
 	private Integer is_free_shipping;
-	private Integer brand_id;
-	private Integer agreement_price;
+	private Long brand_id;
+	private Long agreement_price;
 	private Long stock;
 	private String third_brand_name;
-	private Integer choose_count;
+	private Long choose_count;
 	private Integer real_sale;
 	private Long shop_id;
 	private Long third_id;
 	private Integer updated_time;
 	private Long guide_price;
+	private Long sale_price;
+	private Long cost_price;
 	private String origin;
 	private Integer real_return_sale;
 	private Integer real_month_return_sale;
 	private String title;
 	private Double rate;
+	private String category_id;
+	private Integer promotion_rate;
+	private Integer is_selected;
+	private Integer is_black;
+	private Long seller_id;
+	private Long channel_id;
+	private String activity_ids;
+	private Integer is_risk;
+	private List<String> category_ids;
 
 	public String getThird_category_name() {
 		return third_category_name;
@@ -83,7 +104,6 @@ public class GoodsList {
 		this.third_category_name = third_category_name;
 	}
 
-
 	public Integer getSale() {
 		return sale;
 	}
@@ -92,11 +112,11 @@ public class GoodsList {
 		this.sale = sale;
 	}
 
-	public Integer getMarket_price() {
+	public Long getMarket_price() {
 		return market_price;
 	}
 
-	public void setMarket_price(Integer market_price) {
+	public void setMarket_price(Long market_price) {
 		this.market_price = market_price;
 	}
 
@@ -132,19 +152,11 @@ public class GoodsList {
 		this.unit = unit;
 	}
 
-	public String getType() {
-		return type;
-	}
-
-	public void setType(String type) {
-		this.type = type;
-	}
-
-	public Integer getTotal_stock() {
+	public Long getTotal_stock() {
 		return total_stock;
 	}
 
-	public void setTotal_stock(Integer total_stock) {
+	public void setTotal_stock(Long total_stock) {
 		this.total_stock = total_stock;
 	}
 
@@ -204,19 +216,19 @@ public class GoodsList {
 		this.is_free_shipping = is_free_shipping;
 	}
 
-	public Integer getBrand_id() {
+	public Long getBrand_id() {
 		return brand_id;
 	}
 
-	public void setBrand_id(Integer brand_id) {
+	public void setBrand_id(Long brand_id) {
 		this.brand_id = brand_id;
 	}
 
-	public Integer getAgreement_price() {
+	public Long getAgreement_price() {
 		return agreement_price;
 	}
 
-	public void setAgreement_price(Integer agreement_price) {
+	public void setAgreement_price(Long agreement_price) {
 		this.agreement_price = agreement_price;
 	}
 
@@ -236,11 +248,11 @@ public class GoodsList {
 		this.third_brand_name = third_brand_name;
 	}
 
-	public Integer getChoose_count() {
+	public Long getChoose_count() {
 		return choose_count;
 	}
 
-	public void setChoose_count(Integer choose_count) {
+	public void setChoose_count(Long choose_count) {
 		this.choose_count = choose_count;
 	}
 
@@ -284,6 +296,22 @@ public class GoodsList {
 		this.guide_price = guide_price;
 	}
 
+	public Long getSale_price() {
+		return sale_price;
+	}
+
+	public void setSale_price(Long sale_price) {
+		this.sale_price = sale_price;
+	}
+
+	public Long getCost_price() {
+		return cost_price;
+	}
+
+	public void setCost_price(Long cost_price) {
+		this.cost_price = cost_price;
+	}
+
 	public String getOrigin() {
 		return origin;
 	}
@@ -324,6 +352,70 @@ public class GoodsList {
 		this.rate = rate;
 	}
 
+	public String getCategory_id() {
+		return category_id;
+	}
+
+	public void setCategory_id(String category_id) {
+		this.category_id = category_id;
+	}
+
+	public Integer getPromotion_rate() {
+		return promotion_rate;
+	}
+
+	public void setPromotion_rate(Integer promotion_rate) {
+		this.promotion_rate = promotion_rate;
+	}
+
+	public Integer getIs_selected() {
+		return is_selected;
+	}
+
+	public void setIs_selected(Integer is_selected) {
+		this.is_selected = is_selected;
+	}
+
+	public Integer getIs_black() {
+		return is_black;
+	}
+
+	public void setIs_black(Integer is_black) {
+		this.is_black = is_black;
+	}
+
+	public Long getSeller_id() {
+		return seller_id;
+	}
+
+	public void setSeller_id(Long seller_id) {
+		this.seller_id = seller_id;
+	}
+
+	public Long getChannel_id() {
+		return channel_id;
+	}
+
+	public void setChannel_id(Long channel_id) {
+		this.channel_id = channel_id;
+	}
+
+	public String getActivity_ids() {
+		return activity_ids;
+	}
+
+	public void setActivity_ids(String activity_ids) {
+		this.activity_ids = activity_ids;
+	}
+
+	public Integer getIs_risk() {
+		return is_risk;
+	}
+
+	public void setIs_risk(Integer is_risk) {
+		this.is_risk = is_risk;
+	}
+
 	public List<String> getCategory_ids() {
 		return category_ids;
 	}
@@ -331,10 +423,4 @@ public class GoodsList {
 	public void setCategory_ids(List<String> category_ids) {
 		this.category_ids = category_ids;
 	}
-
-	private List<String> category_ids;
-
-
-
-
 }
