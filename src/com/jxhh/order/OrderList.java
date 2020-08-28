@@ -1,6 +1,5 @@
 package com.jxhh.order;
 
-import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -11,17 +10,17 @@ public class OrderList {
 
 
     /**
-     * id : 11802
-     * sn : 20200622151646241976
-     * thirdSn : SH20200622151638351628
+     * id : 11902
+     * sn : 20200624150036412773
+     * thirdSn : SN20200624150005xq
      * logisticFee : 800
-     * goodsFee : 1344
-     * address : {"consignee":"长相","phone":"13308889899","province":"安徽省","city":"合肥市","area":"瑶海区","street":"明光路街道","description":"9号"}
-     * createdTime : 1592810206
+     * goodsFee : 588
+     * address : {"consignee":"小明","phone":"13800138000","province":"北京","city":"北京市","area":"东城区","street":"其他","description":"的的"}
+     * createdTime : 1592982036
      * payStatus : 1
      * checkStatus : 1
      * status : 1
-     * children : [{"sn":"20200622151646241976_2_1","source":2,"logisticFee":800,"goodsFee":1344,"goodsStatus":0,"orderStatus":2,"goods":[{"sn":"20200622151646241976_2_1_1","goodsId":9401,"sku":9054,"skuName":"【舒缓蚊叮】护肤香膏20g×2支","image":"https://img13.360buyimg.com/n1/jfs/t1/126453/35/1319/78959/5ebba3c1E79314ed2/e909785ed7df9118.jpg","name":"润本（RUNBEN) 宝宝痱子香膏 20g×2支装 止痒膏 婴童护肤 护臀膏 润肤乳","number":1,"price":1344,"refundTime":0,"createdTime":1592810206,"payStatus":0,"deliverName":"","deliverNo":"","afterSaleStatus":0}],"deliverTime":0,"createdTime":1592810206,"shopInfo":{"name":"京东自营","companyName":"","contactName":"","mobile":"","phone":"","contactURL":""}}]
+     * children : [{"sn":"20200624150036412773_2_1","order_sn":"","money":0,"source":2,"logisticFee":800,"goodsFee":588,"goodsStatus":0,"orderStatus":2,"isRefund":false,"goods":[{"sn":"20200624150036412773_2_1_1","goodsId":624977,"sku":4490638,"skuName":"默认","image":"https://img13.360buyimg.com/n1/jfs/t1/110607/38/7067/655720/5e574610E736ca2f9/3ab82f96945f6f07.png","name":"三只松鼠重庆酸辣粉x1桶 方便面 网红方便素食粉丝风味地方特产130g","number":1,"price":588,"refundTime":0,"createdTime":1592982037,"payStatus":0,"deliverName":"","deliverNo":"","afterSaleStatus":0}],"deliverTime":0,"createdTime":1592982037,"shopInfo":{"name":"京东自营","companyName":"","contactName":"","mobile":"","phone":"","contactURL":""}}]
      */
 
     private Long id;
@@ -29,11 +28,37 @@ public class OrderList {
     private String thirdSn;
     private Long logisticFee;
     private Long goodsFee;
+    /**
+     * consignee : 小明
+     * phone : 13800138000
+     * province : 北京
+     * city : 北京市
+     * area : 东城区
+     * street : 其他
+     * description : 的的
+     */
+
     private AddressBean address;
     private Integer createdTime;
     private Integer payStatus;
     private Integer checkStatus;
     private Integer status;
+    /**
+     * sn : 20200624150036412773_2_1
+     * order_sn :
+     * money : 0
+     * source : 2
+     * logisticFee : 800
+     * goodsFee : 588
+     * goodsStatus : 0
+     * orderStatus : 2
+     * isRefund : false
+     * goods : [{"sn":"20200624150036412773_2_1_1","goodsId":624977,"sku":4490638,"skuName":"默认","image":"https://img13.360buyimg.com/n1/jfs/t1/110607/38/7067/655720/5e574610E736ca2f9/3ab82f96945f6f07.png","name":"三只松鼠重庆酸辣粉x1桶 方便面 网红方便素食粉丝风味地方特产130g","number":1,"price":588,"refundTime":0,"createdTime":1592982037,"payStatus":0,"deliverName":"","deliverNo":"","afterSaleStatus":0}]
+     * deliverTime : 0
+     * createdTime : 1592982037
+     * shopInfo : {"name":"京东自营","companyName":"","contactName":"","mobile":"","phone":"","contactURL":""}
+     */
+
     private List<ChildrenBean> children;
 
     public Long getId() {
@@ -124,17 +149,7 @@ public class OrderList {
         this.children = children;
     }
 
-    public static class AddressBean implements Serializable {
-        /**
-         * consignee : 长相
-         * phone : 13308889899
-         * province : 安徽省
-         * city : 合肥市
-         * area : 瑶海区
-         * street : 明光路街道
-         * description : 9号
-         */
-
+    public static class AddressBean {
         private String consignee;
         private String phone;
         private String province;
@@ -200,31 +215,46 @@ public class OrderList {
         }
     }
 
-    public static class ChildrenBean implements Serializable {
-        /**
-         * sn : 20200622151646241976_2_1
-         * source : 2
-         * logisticFee : 800
-         * goodsFee : 1344
-         * goodsStatus : 0
-         * orderStatus : 2
-         * goods : [{"sn":"20200622151646241976_2_1_1","goodsId":9401,"sku":9054,"skuName":"【舒缓蚊叮】护肤香膏20g×2支","image":"https://img13.360buyimg.com/n1/jfs/t1/126453/35/1319/78959/5ebba3c1E79314ed2/e909785ed7df9118.jpg","name":"润本（RUNBEN) 宝宝痱子香膏 20g×2支装 止痒膏 婴童护肤 护臀膏 润肤乳","number":1,"price":1344,"refundTime":0,"createdTime":1592810206,"payStatus":0,"deliverName":"","deliverNo":"","afterSaleStatus":0}]
-         * deliverTime : 0
-         * createdTime : 1592810206
-         * shopInfo : {"name":"京东自营","companyName":"","contactName":"","mobile":"","phone":"","contactURL":""}
-         */
-
+    public static class ChildrenBean {
         private String sn;
+        private String order_sn;
+        private Long money;
         private Integer source;
         private Long logisticFee;
         private Long goodsFee;
         private Integer goodsStatus;
         private Integer orderStatus;
+        private Boolean isRefund;
         private Integer deliverTime;
         private Integer createdTime;
-        private ShopInfoBean shopInfo;
-        private List<GoodsBean> goods;
+        /**
+         * name : 京东自营
+         * companyName :
+         * contactName :
+         * mobile :
+         * phone :
+         * contactURL :
+         */
 
+        private ShopInfoBean shopInfo;
+        /**
+         * sn : 20200624150036412773_2_1_1
+         * goodsId : 624977
+         * sku : 4490638
+         * skuName : 默认
+         * image : https://img13.360buyimg.com/n1/jfs/t1/110607/38/7067/655720/5e574610E736ca2f9/3ab82f96945f6f07.png
+         * name : 三只松鼠重庆酸辣粉x1桶 方便面 网红方便素食粉丝风味地方特产130g
+         * number : 1
+         * price : 588
+         * refundTime : 0
+         * createdTime : 1592982037
+         * payStatus : 0
+         * deliverName :
+         * deliverNo :
+         * afterSaleStatus : 0
+         */
+
+        private List<GoodsBean> goods;
 
         public String getSn() {
             return sn;
@@ -232,6 +262,22 @@ public class OrderList {
 
         public void setSn(String sn) {
             this.sn = sn;
+        }
+
+        public String getOrder_sn() {
+            return order_sn;
+        }
+
+        public void setOrder_sn(String order_sn) {
+            this.order_sn = order_sn;
+        }
+
+        public Long getMoney() {
+            return money;
+        }
+
+        public void setMoney(Long money) {
+            this.money = money;
         }
 
         public Integer getSource() {
@@ -274,6 +320,14 @@ public class OrderList {
             this.orderStatus = orderStatus;
         }
 
+        public Boolean getRefund() {
+            return isRefund;
+        }
+
+        public void setRefund(Boolean refund) {
+            isRefund = refund;
+        }
+
         public Integer getDeliverTime() {
             return deliverTime;
         }
@@ -306,16 +360,7 @@ public class OrderList {
             this.goods = goods;
         }
 
-        public static class ShopInfoBean implements Serializable {
-            /**
-             * name : 京东自营
-             * companyName :
-             * contactName :
-             * mobile :
-             * phone :
-             * contactURL :
-             */
-
+        public static class ShopInfoBean {
             private String name;
             private String companyName;
             private String contactName;
@@ -372,24 +417,7 @@ public class OrderList {
             }
         }
 
-        public static class GoodsBean implements Serializable {
-            /**
-             * sn : 20200622151646241976_2_1_1
-             * goodsId : 9401
-             * sku : 9054
-             * skuName : 【舒缓蚊叮】护肤香膏20g×2支
-             * image : https://img13.360buyimg.com/n1/jfs/t1/126453/35/1319/78959/5ebba3c1E79314ed2/e909785ed7df9118.jpg
-             * name : 润本（RUNBEN) 宝宝痱子香膏 20g×2支装 止痒膏 婴童护肤 护臀膏 润肤乳
-             * number : 1
-             * price : 1344
-             * refundTime : 0
-             * createdTime : 1592810206
-             * payStatus : 0
-             * deliverName :
-             * deliverNo :
-             * afterSaleStatus : 0
-             */
-
+        public static class GoodsBean {
             private String sn;
             private Long goodsId;
             private Long sku;
@@ -516,6 +544,9 @@ public class OrderList {
             public void setAfterSaleStatus(Integer afterSaleStatus) {
                 this.afterSaleStatus = afterSaleStatus;
             }
+
+
+
         }
     }
 }
