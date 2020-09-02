@@ -52,7 +52,7 @@ public class SubCategoryRequest implements InterFaceRequest {
         if(null == getSource()) throw new MustParamsException("对象"+getClass()+": source不能为空");
 
         TreeMap<String, Object> params = new TreeMap<String, Object>();
-        params.put("params",getParent_id());
+        params.put("parent_id",getParent_id());
         params.put("source",getSource());
 
         return params;
