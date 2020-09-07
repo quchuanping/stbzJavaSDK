@@ -63,7 +63,9 @@ public class ApiClient {
 		TreeMap<String, Object> params = new TreeMap<String,Object>();
 		params.put("Api-App-Key", appKey);
 		params.put("Api-Time-Stamp", System.currentTimeMillis()+"");
-		params.put("Api-Nonce", MD5Utils.stringToMD5(appKey+System.currentTimeMillis()));
+		final double d = Math.random();
+		final long i = (long)(System.currentTimeMillis()*d);
+		params.put("Api-Nonce", MD5Utils.stringToMD5(appKey+i));
 		return params;
 		
 	}
@@ -114,6 +116,7 @@ public class ApiClient {
 		Gson gson = new Gson();
 		String jsonBody = gson.toJson(params);
 		if(this.debug) System.err.println("接口请求地址: "+url);
+
 		if(this.debug) System.err.println("接口请求参数: "+jsonBody);
 		TreeMap<String,Object> mustParams = getMustParams();
 
@@ -123,18 +126,22 @@ public class ApiClient {
 				url += getUrlParams(params);
 				params.putAll(mustParams);
 				mustParams.put("Api-Sign", sign(params,""));
+				if(this.debug) System.err.println("接口请求Header: "+gson.toJson(getHeaders(mustParams)));
 				result = HttpClient.get(url, getHeaders(mustParams));
 			break;
 			case GETBODY:
 				mustParams.put("Api-Sign", sign(mustParams,jsonBody));
+				if(this.debug) System.err.println("接口请求Header: "+gson.toJson(getHeaders(mustParams)));
 				result = HttpClient.get(url, jsonBody, getHeaders(mustParams));
 				break;
 			case POST:
 				mustParams.put("Api-Sign", sign(mustParams,jsonBody));
+				if(this.debug) System.err.println("接口请求Header: "+gson.toJson(getHeaders(mustParams)));
 				result = HttpClient.post(url, jsonBody, getHeaders(mustParams));
 				break;
 			case PATCH:
 				mustParams.put("Api-Sign", sign(mustParams,jsonBody));
+				if(this.debug) System.err.println("接口请求Header: "+gson.toJson(getHeaders(mustParams)));
 				result = HttpClient.patch(url, jsonBody, getHeaders(mustParams));
 				break;
 			default:
