@@ -48,9 +48,10 @@ public class ApiClient {
 		for(String key : params.keySet()) {
 			signStr = signStr + key + params.get(key);
 		}
-		json = json.replaceAll("\\s*", "");
-		System.out.println(json);
+
 		signStr = signStr + appSecret + json;
+		signStr = signStr.replaceAll("\\s*", "");
+		System.out.println(signStr);
 		String sha1Str = Sha1Utils.getSha1(signStr);
 		String md5Str = MD5Utils.stringToMD5(sha1Str);
 		return md5Str.toUpperCase();
