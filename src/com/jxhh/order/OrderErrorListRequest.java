@@ -66,6 +66,6 @@ public class OrderErrorListRequest implements InterFaceRequest {
 
     @Override
     public Type getJsonClassType() {
-        return new TypeToken<ApiResultList>() {}.getType();
+        return new TypeToken<ApiResultList<OrderErrorList>>() {}.getType();
     }
 }
