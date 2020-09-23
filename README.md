@@ -239,7 +239,10 @@ SDK基本用法示例
             OrderErrorListRequest orderErrorListRequest = new OrderErrorListRequest();
             orderErrorListRequest.setPage(1);
             orderErrorListRequest.setLimit(10);
-            ApiResponse apiResponse44 = apiClient.exec(orderErrorListRequest);
+            ApiResponse<OrderErrorList> apiResponse44 = apiClient.exec(orderErrorListRequest);
+            List<OrderErrorList> orderLists = apiResponse44.getLists();
+            OrderErrorList orderList = orderLists.get(0);
+            System.out.println(orderList.getMessage());
 
 
              // 查询物流
