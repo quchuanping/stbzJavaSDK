@@ -69,7 +69,7 @@ SDK基本用法示例
             System.out.println(goodsDetail.getTitle());
 
 
-            //批量新商品
+            //批量更新商品
             BatchGoodsUpdateRequest batchGoodsUpdateRequest = new BatchGoodsUpdateRequest();
             batchGoodsUpdateRequest.setGoodsIds("10362,10363");
             ApiResponse<String> apiResponse5 = apiClient.exec(batchGoodsUpdateRequest);
