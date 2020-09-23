@@ -155,6 +155,7 @@ public class ApiClient {
 		apiResponse.setResultString(result);
 		if(1 == request.getResponseType()){ //列表
 			ApiResultList apiResultList = gson.fromJson(result, request.getJsonClassType());
+			apiResponse.setTotal(apiResultList.getData().getTotal());
 			apiResponse.setCode(apiResultList.getCode());
 			apiResponse.setMsg(apiResultList.getMsg());
 			if(1 == apiResultList.getCode()){

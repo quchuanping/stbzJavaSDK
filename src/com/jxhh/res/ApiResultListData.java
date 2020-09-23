@@ -10,6 +10,15 @@ public class ApiResultListData<T> {
     private long count;
 
     private List<T> data;
+    private Long total;
+
+    public Long getTotal() {
+        return total;
+    }
+
+    public void setTotal(Long total) {
+        this.total = total;
+    }
 
     public List<T> getData() {
         return data;

@@ -21,6 +21,16 @@ public class ApiResponse<T> {
 
     private List<T> lists;
 
+    private Long total;
+
+    public Long getTotal() {
+        return total;
+    }
+
+    public void setTotal(Long total) {
+        this.total = total;
+    }
+
     /**
      * 获取返回code
      * @return
