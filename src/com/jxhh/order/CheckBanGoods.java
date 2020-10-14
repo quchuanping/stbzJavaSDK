@@ -2,7 +2,10 @@ package com.jxhh.order;
 
 import java.io.Serializable;
 import java.util.List;
-
+/**
+ *
+ * 可售性校验
+ */
 public class CheckBanGoods{
 
 
@@ -42,22 +45,22 @@ public class CheckBanGoods{
 
     public static class DataBean implements Serializable {
 
-        private List<Integer> available;
-        private List<Integer> ban;
+        private List<Long> available;
+        private List<Long> ban;
 
-        public List<Integer> getAvailable() {
+        public List<Long> getAvailable() {
             return available;
         }
 
-        public void setAvailable(List<Integer> available) {
+        public void setAvailable(List<Long> available) {
             this.available = available;
         }
 
-        public List<Integer> getBan() {
+        public List<Long> getBan() {
             return ban;
         }
 
-        public void setBan(List<Integer> ban) {
+        public void setBan(List<Long> ban) {
             this.ban = ban;
         }
     }
