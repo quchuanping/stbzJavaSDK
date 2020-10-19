@@ -16,7 +16,7 @@ public class CheckOrder {
 
     private Long freight;
 
-    private List<Integer> skus;
+    private List<Long> skus;
 
     public Long getFreight() {
         return freight;
@@ -26,11 +26,11 @@ public class CheckOrder {
         this.freight = freight;
     }
 
-    public List<Integer> getSkus() {
+    public List<Long> getSkus() {
         return skus;
     }
 
-    public void setSkus(List<Integer> skus) {
+    public void setSkus(List<Long> skus) {
         this.skus = skus;
     }
 
