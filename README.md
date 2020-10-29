@@ -264,7 +264,41 @@ SDK基本用法示例
             OrderLogisticFirms orderLogisticFirms = listOrderLogisticFirms.get(0);
             System.out.println(orderLogisticFirms.getName());
 
+            //在线选品v2（新版）
+            GoodsStorageOnlineListRequest goodsStorageOnlineRequest = new GoodsStorageOnlineListRequest();
+            goodsStorageOnlineRequest.setPage(1);
+            goodsStorageOnlineRequest.setLimit(1);
+            GoodsStorageOnlineListRequest.Section section = new GoodsStorageOnlineListRequest.Section();
+            section.setFrom(10);
+            section.setTo(100);
+            goodsStorageOnlineRequest.setAgreement_price(section);
+            ApiResponse<GoodsStorageOnlineList> apiResponse4 =  apiClient.exec(goodsStorageOnlineRequest);
+            GoodsStorageOnlineList goodsStorageOnlineList = apiResponse4.getLists().get(0);
+            System.out.println(goodsStorageOnlineList.getThird_brand_name());
+  
 
+            //选品分组列表
+            GoodsGroupListRequest goodsGroupListRequest = new GoodsGroupListRequest();
+            goodsGroupListRequest.setPage(1);
+            goodsGroupListRequest.setLimit(10);
+            ApiResponse<GoodsGroupList> apiResponse = apiClient.exec(goodsGroupListRequest);
+            GoodsGroupList goodsGroupList = apiResponse.getLists().get(0);
+            System.out.println(goodsGroupList.getName());
+            
+            //选品分组商品列表
+            GoodsGroupGoodsListRequest goodsGroupGoodsListRequest = new GoodsGroupGoodsListRequest();
+            goodsGroupGoodsListRequest.setPage(1);
+            goodsGroupGoodsListRequest.setLimit(1);
+            GoodsGroupGoodsListRequest.Section section = new GoodsGroupGoodsListRequest.Section();
+            section.setFrom(1);
+            section.setTo(1000);
+            goodsGroupGoodsListRequest.setActivity_price(section);
+            apiClient.exec(goodsGroupGoodsListRequest);
+            ApiResponse<GoodsGroupGoodsList> apiResponse = apiClient.exec(goodsGroupGoodsListRequest);
+            GoodsGroupGoodsList goodsGroupGoodsList = apiResponse.getLists().get(0);
+            System.out.println(goodsGroupGoodsList.getTitle());
+        
+        
             //选品库添加商品
             GoodsStorageAddRequest goodsStorageAddRequest = new GoodsStorageAddRequest();
             Set<Long> set = new HashSet<>();
