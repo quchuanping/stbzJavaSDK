@@ -37,8 +37,11 @@ public class GoodsStorageAddRequest implements InterFaceRequest {
 
     @Override
     public TreeMap<String, Object> getParams() throws MustParamsException {
-        TreeMap<String,Object> params = new TreeMap<>();
+
+        TreeMap<String,Object> params = new TreeMap();
+
         if(null == getGoods_ids()) throw new MustParamsException("对象"+getClass()+": goods_ids不能为空");
+
         String goods_ids = "";
         for (Long i:getGoods_ids()) {
             goods_ids = goods_ids+i+",";
