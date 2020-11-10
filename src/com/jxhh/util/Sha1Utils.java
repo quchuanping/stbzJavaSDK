@@ -15,7 +15,7 @@ public class Sha1Utils {
 			} catch (NoSuchAlgorithmException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
-				throw new RuntimeException("没有这个sha1算法�?");
+				throw new RuntimeException("没有这个sha1算法?");
 			}
 	        byte[] result = mDigest.digest(input);
 	        StringBuffer sb = new StringBuffer();
