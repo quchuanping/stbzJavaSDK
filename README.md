@@ -387,6 +387,18 @@ SDK基本用法示例
             afterSerViceDetailRequest.setId((long)67);
             ApiResponse<AfterServiceDetail> apiResponse = apiClient.exec(afterSerViceDetailRequest);
             System.out.println(apiResponse.getObject().getId());
+            
+            
+            //资金流水记录
+            CashFlowListRequest cashFlowListRequest = new CashFlowListRequest();
+            cashFlowListRequest.setPage(1);
+            cashFlowListRequest.setLimit(10);
+            cashFlowListRequest.setStartTime(System.currentTimeMillis()/1000 - 3600*24);
+            cashFlowListRequest.setEndTime(System.currentTimeMillis()/1000);
+            ApiResponse<CashFlowList> apiResponse =  apiClient.exec(cashFlowListRequest);
+            String orderSn = apiResponse.getLists().get(0).getOrder_sn();
+            System.out.println(orderSn);
+
 
             
             
