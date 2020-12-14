@@ -27,8 +27,9 @@ public class ApiResponse<T> {
         return total;
     }
 
-    public void setTotal(Long total) {
+    public ApiResponse setTotal(Long total) {
         this.total = total;
+        return this;
     }
 
     /**
@@ -39,8 +40,9 @@ public class ApiResponse<T> {
         return code;
     }
 
-    public void setCode(Integer code) {
+    public ApiResponse setCode(Integer code) {
         this.code = code;
+        return this;
     }
 
     /**
@@ -51,8 +53,9 @@ public class ApiResponse<T> {
         return msg;
     }
 
-    public void setMsg(String msg) {
+    public ApiResponse setMsg(String msg) {
         this.msg = msg;
+        return this;
     }
 
     /**
@@ -63,8 +66,9 @@ public class ApiResponse<T> {
         return resultString;
     }
 
-    public void setResultString(String resultString) {
+    public ApiResponse setResultString(String resultString) {
         this.resultString = resultString;
+        return this;
     }
 
 
@@ -77,8 +81,9 @@ public class ApiResponse<T> {
         return object;
     }
 
-    public void setObject(T object) {
+    public ApiResponse setObject(T object) {
         this.object = object;
+        return this;
     }
 
     /**
@@ -89,8 +94,9 @@ public class ApiResponse<T> {
         return count;
     }
 
-    public void setCount(Long count) {
+    public ApiResponse setCount(Long count) {
         this.count = count;
+        return this;
     }
 
     /**
@@ -102,8 +108,14 @@ public class ApiResponse<T> {
         return lists;
     }
 
-    public void setLists(List<T> lists) {
+    public ApiResponse setLists(List<T> lists) {
         this.lists = lists;
+        return this;
+    }
+
+
+    public static ApiResponse create(){
+        return new ApiResponse();
     }
 
 }

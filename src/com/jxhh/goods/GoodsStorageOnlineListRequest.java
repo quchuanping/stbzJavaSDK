@@ -223,7 +223,7 @@ public class GoodsStorageOnlineListRequest implements InterFaceRequest {
     @Override
     public TreeMap<String, Object> getParams() throws MustParamsException {
 
-        TreeMap<String,Object> paramsMap = new TreeMap();
+        TreeMap<String,Object> paramsMap = new TreeMap<String,Object>();
 
         if(null == getPage()) throw new MustParamsException("对象"+getClass()+": page不能为空");
         if(null == getLimit()) throw new MustParamsException("对象"+getClass()+": limit不能为空");

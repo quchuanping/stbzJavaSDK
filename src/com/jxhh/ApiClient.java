@@ -8,7 +8,6 @@ import com.jxhh.res.ApiResultList;
 import com.jxhh.res.ApiResultObject;
 import com.jxhh.util.MD5Utils;
 import com.jxhh.util.Sha1Utils;
-import org.apache.http.client.ClientProtocolException;
 
 import java.io.IOException;
 import java.util.Map;
@@ -108,8 +107,89 @@ public class ApiClient {
 	} 
 	
 	
-	public ApiResponse exec(InterFaceRequest request) throws MustParamsException, ClientProtocolException, IOException, ApiRequestException {
-		
+//	public ApiResponse exec(InterFaceRequest request) throws MustParamsException, ClientProtocolException, IOException, ApiRequestException {
+//
+//		TreeMap<String,Object> params = request.getParams();
+//		params = trimParams(params);
+//		String url = apiUrl  + request.getUrl();
+//		InterFaceRequest.RequestMethod method = request.getMethed();
+//		Gson gson = new Gson();
+//		String jsonBody = gson.toJson(params);
+//		if(this.debug) System.err.println("接口请求地址: "+url);
+//
+//		if(this.debug) System.err.println("接口请求参数: "+jsonBody);
+//		TreeMap<String,Object> mustParams = getMustParams();
+//
+//		String result = "";
+//		switch (method) {
+//			case GET:
+//				url += getUrlParams(params);
+//				params.putAll(mustParams);
+//				mustParams.put("Api-Sign", sign(params,""));
+//				if(this.debug) System.err.println("接口请求Header: "+gson.toJson(getHeaders(mustParams)));
+//				result = HttpClient.get(url, getHeaders(mustParams));
+//			break;
+//			case GETBODY:
+//				mustParams.put("Api-Sign", sign(mustParams,jsonBody));
+//				if(this.debug) System.err.println("接口请求Header: "+gson.toJson(getHeaders(mustParams)));
+//				result = HttpClient.get(url, jsonBody, getHeaders(mustParams));
+//				break;
+//			case POST:
+//				mustParams.put("Api-Sign", sign(mustParams,jsonBody));
+//				if(this.debug) System.err.println("接口请求Header: "+gson.toJson(getHeaders(mustParams)));
+//				result = HttpClient.post(url, jsonBody, getHeaders(mustParams));
+//				break;
+//			case PATCH:
+//				mustParams.put("Api-Sign", sign(mustParams,jsonBody));
+//				if(this.debug) System.err.println("接口请求Header: "+gson.toJson(getHeaders(mustParams)));
+//				result = HttpClient.patch(url, jsonBody, getHeaders(mustParams));
+//				break;
+//			default:
+//				break;
+//		}
+//
+//		if(this.debug) System.err.println("接口返回数据： "+result);
+//		if(result.equals("")) throw new ApiRequestException("Api请求失败");
+//		ApiResponse apiResponse = new ApiResponse();
+//		apiResponse.setResultString(result);
+//		if(1 == request.getResponseType()){ //列表
+//			ApiResultList apiResultList = gson.fromJson(result, request.getJsonClassType());
+//			apiResponse.setTotal(apiResultList.getData().getTotal());
+//			apiResponse.setCode(apiResultList.getCode());
+//			apiResponse.setMsg(apiResultList.getMsg());
+//			if(1 == apiResultList.getCode()){
+//				apiResponse.setCount(apiResultList.getData().getCount());
+//				apiResponse.setLists(apiResultList.getData().getList());
+//				if(null == apiResultList.getData().getList()){
+//					apiResponse.setLists(apiResultList.getData().getData());
+//				}
+//			}
+//		}else if(0 == request.getResponseType()){ //对象
+//			ApiResultObject apiResultObject = gson.fromJson(result, request.getJsonClassType());
+//			apiResponse.setCode(apiResultObject.getCode());
+//			apiResponse.setMsg(apiResultObject.getMsg());
+//			if(1 == apiResultObject.getCode()){
+//				apiResponse.setObject(apiResultObject.getData());
+//			}
+//		}else if(2 == request.getResponseType()){ //数组
+//
+//			ApiResultArray apiResultArray = gson.fromJson(result, request.getJsonClassType());
+//			apiResponse.setCode(apiResultArray.getCode());
+//			apiResponse.setMsg(apiResultArray.getMsg());
+//			if(1 == apiResultArray.getCode()){
+//				apiResponse.setLists(apiResultArray.getData());
+//			}
+//
+//		}else{
+//			apiResponse.setObject(gson.fromJson(result, request.getJsonClassType()));
+//		}
+//		return apiResponse;
+//
+//	}
+
+
+	public ApiResponse exec(InterFaceRequest request) throws MustParamsException, IOException, ApiRequestException {
+
 		TreeMap<String,Object> params = request.getParams();
 		params = trimParams(params);
 		String url = apiUrl  + request.getUrl();
@@ -129,7 +209,7 @@ public class ApiClient {
 				mustParams.put("Api-Sign", sign(params,""));
 				if(this.debug) System.err.println("接口请求Header: "+gson.toJson(getHeaders(mustParams)));
 				result = HttpClient.get(url, getHeaders(mustParams));
-			break;
+				break;
 			case GETBODY:
 				mustParams.put("Api-Sign", sign(mustParams,jsonBody));
 				if(this.debug) System.err.println("接口请求Header: "+gson.toJson(getHeaders(mustParams)));
@@ -151,93 +231,36 @@ public class ApiClient {
 
 		if(this.debug) System.err.println("接口返回数据： "+result);
 		if(result.equals("")) throw new ApiRequestException("Api请求失败");
-		ApiResponse apiResponse = new ApiResponse();
-		apiResponse.setResultString(result);
+
 		if(1 == request.getResponseType()){ //列表
 			ApiResultList apiResultList = gson.fromJson(result, request.getJsonClassType());
-			apiResponse.setTotal(apiResultList.getData().getTotal());
-			apiResponse.setCode(apiResultList.getCode());
-			apiResponse.setMsg(apiResultList.getMsg());
 			if(1 == apiResultList.getCode()){
-				apiResponse.setCount(apiResultList.getData().getCount());
-				apiResponse.setLists(apiResultList.getData().getList());
 				if(null == apiResultList.getData().getList()){
-					apiResponse.setLists(apiResultList.getData().getData());
+					return ApiResponse.create().setTotal(apiResultList.getData().getTotal()).setCount(apiResultList.getData().getCount()).setCode(apiResultList.getCode())
+							.setMsg(apiResultList.getMsg()).setLists(apiResultList.getData().getData()).setResultString(result);
 				}
+				return ApiResponse.create().setTotal(apiResultList.getData().getTotal()).setCount(apiResultList.getData().getCount()).setCode(apiResultList.getCode())
+						.setMsg(apiResultList.getMsg()).setLists(apiResultList.getData().getList()).setResultString(result);
 			}
+			return ApiResponse.create().setCode(apiResultList.getCode()).setMsg(apiResultList.getMsg()).setResultString(result);
 		}else if(0 == request.getResponseType()){ //对象
 			ApiResultObject apiResultObject = gson.fromJson(result, request.getJsonClassType());
-			apiResponse.setCode(apiResultObject.getCode());
-			apiResponse.setMsg(apiResultObject.getMsg());
 			if(1 == apiResultObject.getCode()){
-				apiResponse.setObject(apiResultObject.getData());
+				return ApiResponse.create().setCode(apiResultObject.getCode()).setMsg(apiResultObject.getMsg()).setObject(apiResultObject.getData()).setResultString(result);
 			}
+			return ApiResponse.create().setCode(apiResultObject.getCode()).setMsg(apiResultObject.getMsg()).setResultString(result);
 		}else if(2 == request.getResponseType()){ //数组
 
 			ApiResultArray apiResultArray = gson.fromJson(result, request.getJsonClassType());
-			apiResponse.setCode(apiResultArray.getCode());
-			apiResponse.setMsg(apiResultArray.getMsg());
 			if(1 == apiResultArray.getCode()){
-				apiResponse.setLists(apiResultArray.getData());
+				return ApiResponse.create().setCode(apiResultArray.getCode()).setMsg(apiResultArray.getMsg()).setLists(apiResultArray.getData()).setResultString(result);
 			}
-
+			return ApiResponse.create().setCode(apiResultArray.getCode()).setMsg(apiResultArray.getMsg()).setResultString(result);
 		}else{
-			apiResponse.setObject(gson.fromJson(result, request.getJsonClassType()));
+			return ApiResponse.create().setObject(gson.fromJson(result, request.getJsonClassType())).setResultString(result);
 		}
-		return apiResponse;
-
-
-//		TreeMap<String,Object> params = request.getParams();
-//		String json = JSON.toJSONString(params);
-//		System.out.println(json);
-//		String url = apiUrl + request.getUrl();
-//		StbzRequest.RequestMethod method = request.getMethed();
-//		System.out.println(method);
-//		HttpClient httpClient = new HttpClient();
-//		TreeMap<String,Object> mustParams = getMustParams();
-//		String result = "";
-//		switch (method) {
-//			case GET:
-//				System.out.println(url);
-//				url += getUrlParams(params);
-//				System.out.println(url);
-//				params.putAll(mustParams);
-//				System.err.println(JSON.toJSONString(params));
-//				mustParams.put("Api-Sign", sign(params,""));
-//				result = httpClient.get(url, getHeaders(mustParams));
-//			break;
-//			case GETBODY:
-//				System.out.println(url);
-//				mustParams.put("Api-Sign", sign(mustParams,json));
-//				result = httpClient.get(url, params, getHeaders(mustParams));
-//			break;
-//			case POST:
-//					System.out.println(url);
-//					mustParams.put("Api-Sign", sign(mustParams,json));
-//					result = httpClient.post(url, params, getHeaders(mustParams));
-//				break;
-//			case POSTBODY:
-//				System.out.println(url);
-//				mustParams.put("Api-Sign", sign(mustParams,json));
-//				result = httpClient.postBody(url, params, getHeaders(mustParams));
-//			break;
-//			case PATCH:
-//				mustParams.put("Api-Sign", sign(mustParams,json));
-//				result = httpClient.patch(url, params, getHeaders(mustParams));
-//			break;
-//			case DELETE:
-//				mustParams.put("Api-Sign", sign(mustParams,json));
-//				result = httpClient.delete(url, params, getHeaders(mustParams));
-//			break;
-//			
-//			default:
-//				break;
-//		}
-//		
-//		return result;
-		
-//		return "";
 
 	}
-	
+
+
 }

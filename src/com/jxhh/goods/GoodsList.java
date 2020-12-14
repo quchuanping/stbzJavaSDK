@@ -1,6 +1,6 @@
 package com.jxhh.goods;
 
-import groovy.beans.Bindable;
+
 
 import java.util.List;
 
