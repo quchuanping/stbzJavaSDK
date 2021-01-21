@@ -59,6 +59,16 @@ public class GoodsStorageOnlineListRequest implements InterFaceRequest {
 
     private Section profits;
 
+    private Section created_time;
+
+    public Section getCreated_time() {
+        return created_time;
+    }
+
+    public void setCreated_time(Section created_time) {
+        this.created_time = created_time;
+    }
+
     public Integer getPage() {
         return page;
     }
@@ -244,6 +254,7 @@ public class GoodsStorageOnlineListRequest implements InterFaceRequest {
         if(null != getIs_free_shipping()) paramsMap.put("is_free_shipping", getIs_free_shipping());
         if(null != getShop_words()) paramsMap.put("shop_words", getShop_words());
         if(null != getGroup_id()) paramsMap.put("group_id", getGroup_id());
+        if(null != getCreated_time()) paramsMap.put("created_time",getCreated_time());
 
         return paramsMap;
     }

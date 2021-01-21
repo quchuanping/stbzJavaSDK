@@ -80,7 +80,7 @@ public class GoodsDetail {
     private String description;
     private SpecsBean specs;
     private List<String> covers;
-    private List<?> attributes;
+    private List<AttributesBean> attributes;
 
     public Long getId() {
         return id;
@@ -354,13 +354,36 @@ public class GoodsDetail {
         this.covers = covers;
     }
 
-    public List<?> getAttributes() {
+    public List<AttributesBean> getAttributes() {
         return attributes;
     }
 
-    public void setAttributes(List<?> attributes) {
+    public void setAttributes(List<AttributesBean> attributes) {
         this.attributes = attributes;
     }
+
+
+    public static class AttributesBean {
+        private String name;
+        private String value;
+
+        public String getName() {
+            return name;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+
+        public String getValue() {
+            return value;
+        }
+
+        public void setValue(String value) {
+            this.value = value;
+        }
+    }
+
 
     public static class SpecsBean {
         /**
