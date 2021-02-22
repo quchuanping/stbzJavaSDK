@@ -53,13 +53,31 @@ public class GoodsStorageOnlineListRequest implements InterFaceRequest {
 
     private Section activity_price;
 
-    private Section promote_rate;
+    private Section promotion_rate;
 
     private Section activity_rate;
 
     private Section profits;
 
     private Section created_time;
+
+    private String search_words;
+
+    public Section getPromotion_rate() {
+        return promotion_rate;
+    }
+
+    public void setPromotion_rate(Section promotion_rate) {
+        this.promotion_rate = promotion_rate;
+    }
+
+    public String getSearch_words() {
+        return search_words;
+    }
+
+    public void setSearch_words(String search_words) {
+        this.search_words = search_words;
+    }
 
     public Section getCreated_time() {
         return created_time;
@@ -173,13 +191,6 @@ public class GoodsStorageOnlineListRequest implements InterFaceRequest {
         this.activity_price = activity_price;
     }
 
-    public Section getPromote_rate() {
-        return promote_rate;
-    }
-
-    public void setPromote_rate(Section promote_rate) {
-        this.promote_rate = promote_rate;
-    }
 
     public Section getActivity_rate() {
         return activity_rate;
@@ -246,7 +257,7 @@ public class GoodsStorageOnlineListRequest implements InterFaceRequest {
         if(null != getAgreement_price()) paramsMap.put("agreement_price", getAgreement_price());
         if(null != getGuide_price()) paramsMap.put("guide_price", getGuide_price());
         if(null != getActivity_price()) paramsMap.put("activity_price", getActivity_price());
-        if(null != getPromote_rate()) paramsMap.put("promote_rate", getPromote_rate());
+        if(null != getPromotion_rate()) paramsMap.put("promotion_rate", getPromotion_rate());
         if(null != getActivity_rate()) paramsMap.put("activity_rate", getActivity_rate());
         if(null != getProfits()) paramsMap.put("profits", getProfits());
         if(null != getType()) paramsMap.put("type", getType());
@@ -255,6 +266,7 @@ public class GoodsStorageOnlineListRequest implements InterFaceRequest {
         if(null != getShop_words()) paramsMap.put("shop_words", getShop_words());
         if(null != getGroup_id()) paramsMap.put("group_id", getGroup_id());
         if(null != getCreated_time()) paramsMap.put("created_time",getCreated_time());
+        if(null != getSearch_words()) paramsMap.put("search_words", getSearch_words());
 
         return paramsMap;
     }
