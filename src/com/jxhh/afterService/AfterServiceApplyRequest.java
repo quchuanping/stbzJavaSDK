@@ -259,7 +259,7 @@ public class AfterServiceApplyRequest implements InterFaceRequest{
         if(null != getPickTypeCode()) params.put("pickTypeCode",getPickTypeCode());
         if(null != getPackageTypeCode()) params.put("packageTypeCode",getPackageTypeCode());
         if(null != getReturnTypeCode()) params.put("returnTypeCode",getReturnTypeCode());
-        if(null != getReturnTypeCode()) params.put("reasonsTypeCode",getReturnTypeCode());
+        if(null != getReasonsTypeCode()) params.put("reasonsTypeCode",getReasonsTypeCode());
         if(null != getUserInfo()) params.put("userInfo",getUserInfo());
 
         return params;
