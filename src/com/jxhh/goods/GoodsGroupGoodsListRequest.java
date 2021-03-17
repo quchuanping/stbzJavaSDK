@@ -29,9 +29,21 @@ public class GoodsGroupGoodsListRequest implements InterFaceRequest {
 
     private Section activity_price;
 
+    public String getSearch_words() {
+        return search_words;
+    }
+
+    public void setSearch_words(String search_words) {
+        this.search_words = search_words;
+    }
+
     private Section promote_rate;
 
     private Section activity_rate;
+
+    private String search_words;
+
+
 
     public Integer getPage() {
         return page;
@@ -175,6 +187,7 @@ public class GoodsGroupGoodsListRequest implements InterFaceRequest {
         if(null != getIs_free_shipping()) paramsMap.put("is_free_shipping", getIs_free_shipping());
         if(null != getShop_words()) paramsMap.put("shop_words", getShop_words());
         if(null != getGroup_id()) paramsMap.put("group_id", getGroup_id());
+        if(null != getSearch_words()) paramsMap.put("search_words", getSearch_words());
 
         return paramsMap;
 
