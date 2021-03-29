@@ -63,6 +63,16 @@ public class GoodsStorageOnlineListRequest implements InterFaceRequest {
 
     private String search_words;
 
+    private Integer recommend;
+
+    public Integer getRecommend() {
+        return recommend;
+    }
+
+    public void setRecommend(Integer recommend) {
+        this.recommend = recommend;
+    }
+
     public Section getPromotion_rate() {
         return promotion_rate;
     }
@@ -267,7 +277,7 @@ public class GoodsStorageOnlineListRequest implements InterFaceRequest {
         if(null != getGroup_id()) paramsMap.put("group_id", getGroup_id());
         if(null != getCreated_time()) paramsMap.put("created_time",getCreated_time());
         if(null != getSearch_words()) paramsMap.put("search_words", getSearch_words());
-
+        if(null != getRecommend()) paramsMap.put("recommend",getRecommend());
         return paramsMap;
     }
 
