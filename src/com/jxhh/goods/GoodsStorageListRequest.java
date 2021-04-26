@@ -33,7 +33,19 @@ public class GoodsStorageListRequest implements InterFaceRequest {
 
     private Integer is_free_shipping;
 
+    public Integer getLast_id() {
+        return last_id;
+    }
+
+    public void setLast_id(Integer last_id) {
+        this.last_id = last_id;
+    }
+
     private Integer commission_agent;
+
+    private Integer last_id;
+
+
 
     public Integer getCommission_agent() {
         return commission_agent;
@@ -242,6 +254,7 @@ public class GoodsStorageListRequest implements InterFaceRequest {
         if(null != getSearch_words()) paramsMap.put("search_words", getSearch_words());
         if(null != getIs_free_shipping()) paramsMap.put("is_free_shipping", getIs_free_shipping());
         if(null != getCommission_agent()) paramsMap.put("commission_agent",getCommission_agent());
+        if(null != getLast_id()) paramsMap.put("last_id",getLast_id());
         return paramsMap;
 
     }
