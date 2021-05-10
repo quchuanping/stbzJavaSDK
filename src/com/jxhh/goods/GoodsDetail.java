@@ -64,6 +64,7 @@ public class GoodsDetail {
     private Long sale_price;
     private Long cost_price;
     private Double activity_rate;
+    private Double promotion_rate;
     private String cover;
     private Long stock;
     private Long total_stock;
@@ -81,6 +82,14 @@ public class GoodsDetail {
     private SpecsBean specs;
     private List<String> covers;
     private List<AttributesBean> attributes;
+
+    public Double getPromotion_rate() {
+        return promotion_rate;
+    }
+
+    public void setPromotion_rate(Double promotion_rate) {
+        this.promotion_rate = promotion_rate;
+    }
 
     public Long getId() {
         return id;
