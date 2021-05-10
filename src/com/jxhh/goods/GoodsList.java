@@ -87,7 +87,7 @@ public class GoodsList {
 	private String title;
 	private Double rate;
 	private String category_id;
-	private Integer promotion_rate;
+	private Double promotion_rate;
 	private Integer is_selected;
 	private Integer is_black;
 	private Long seller_id;
@@ -360,11 +360,11 @@ public class GoodsList {
 		this.category_id = category_id;
 	}
 
-	public Integer getPromotion_rate() {
+	public Double getPromotion_rate() {
 		return promotion_rate;
 	}
 
-	public void setPromotion_rate(Integer promotion_rate) {
+	public void setPromotion_rate(Double promotion_rate) {
 		this.promotion_rate = promotion_rate;
 	}
 

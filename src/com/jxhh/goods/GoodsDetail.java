@@ -63,7 +63,7 @@ public class GoodsDetail {
     private Long activity_price;
     private Long sale_price;
     private Long cost_price;
-    private Long activity_rate;
+    private Double activity_rate;
     private String cover;
     private Long stock;
     private Long total_stock;
@@ -218,11 +218,11 @@ public class GoodsDetail {
         this.cost_price = cost_price;
     }
 
-    public Long getActivity_rate() {
+    public Double getActivity_rate() {
         return activity_rate;
     }
 
-    public void setActivity_rate(Long activity_rate) {
+    public void setActivity_rate(Double activity_rate) {
         this.activity_rate = activity_rate;
     }
 
