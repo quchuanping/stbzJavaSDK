@@ -231,14 +231,6 @@ SDK基本用法示例
             System.out.println(apiResponse.getLists().get(0).getAddress().getConsignee());
 
 
-            // 订单详情
-            OrderDetailRequest orderDetailRequest = new OrderDetailRequest();
-            orderDetailRequest.setSn("20200622151646241976_2_1_1"); //三级订单号
-            ApiResponse<OrderDetail> apiResponse43 = apiClient.exec(orderDetailRequest);
-            OrderDetail orderDetail = apiResponse43.getObject();
-            System.out.println(orderDetail.getAddress().getConsignee());
-
-
             // 错误订单
             OrderErrorListRequest orderErrorListRequest = new OrderErrorListRequest();
             orderErrorListRequest.setPage(1);
