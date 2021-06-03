@@ -353,6 +353,11 @@ SDK基本用法示例
             afterServiceApplyRequest.setLogisticFee((long)10);
             afterServiceApplyRequest.setServiceTypeCode("50");
             afterServiceApplyRequest.setReasonsDescription("不想要了");
+            ApiResponse<Integer> apiResponse = apiClient.exec(afterServiceApplyRequest);
+            if(1 == apiResponse.getCode()){
+                Integer id = (Integer) apiResponse.getObject();
+                System.out.println(id);
+            }
             
             
             
