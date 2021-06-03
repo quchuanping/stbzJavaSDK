@@ -273,7 +273,7 @@ public class AfterServiceApplyRequest implements InterFaceRequest{
 
     @Override
     public Type getJsonClassType() {
-        return new TypeToken<ApiResultObject<Integer>>() {}.getType();
+        return new TypeToken<ApiResultObject<AfterServiceApply>>() {}.getType();
     }
 
 }
