@@ -65,6 +65,16 @@ public class GoodsStorageOnlineListRequest implements InterFaceRequest {
 
     private Integer recommend;
 
+    private Long last_id;
+
+    public Long getLast_id() {
+        return last_id;
+    }
+
+    public void setLast_id(Long last_id) {
+        this.last_id = last_id;
+    }
+
     public Integer getRecommend() {
         return recommend;
     }
@@ -278,6 +288,7 @@ public class GoodsStorageOnlineListRequest implements InterFaceRequest {
         if(null != getCreated_time()) paramsMap.put("created_time",getCreated_time());
         if(null != getSearch_words()) paramsMap.put("search_words", getSearch_words());
         if(null != getRecommend()) paramsMap.put("recommend",getRecommend());
+        if(null != getLast_id()) paramsMap.put("last_id",getLast_id());
         return paramsMap;
     }
 

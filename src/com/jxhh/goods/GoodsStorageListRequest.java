@@ -33,17 +33,17 @@ public class GoodsStorageListRequest implements InterFaceRequest {
 
     private Integer is_free_shipping;
 
-    public Integer getLast_id() {
+    public Long getLast_id() {
         return last_id;
     }
 
-    public void setLast_id(Integer last_id) {
+    public void setLast_id(Long last_id) {
         this.last_id = last_id;
     }
 
     private Integer commission_agent;
 
-    private Integer last_id;
+    private Long last_id;
 
 
 
