@@ -59,16 +59,16 @@ SDK基本用法示例
             //商品详情
             GoodsDetailRequest goodsDetailRequest = new GoodsDetailRequest();
             goodsDetailRequest.setId((long)10362);
-            ApiResponse<GoodsDetail> apiResponse2 = apiClient.exec(goodsDetailRequest);
-            GoodsDetail goodsDetail = apiResponse2.getObject();
+            ApiResponse<GoodsDetail> apiResponse = apiClient.exec(goodsDetailRequest);
+            GoodsDetail goodsDetail = apiResponse.getObject();
             System.out.println(goodsDetail.getTitle());
 
 
             //批量获取商品详情
             BatchGoodsDetailRequest batchGoodsDetailRequest = new BatchGoodsDetailRequest();
             batchGoodsDetailRequest.setIds("10362,10363");
-            ApiResponse<GoodsDetail> apiResponse2 = apiClient.exec(batchGoodsDetailRequest);
-            List<GoodsDetail> listGoodsDetail = apiResponse2.getLists();
+            ApiResponse<GoodsDetail> apiResponse = apiClient.exec(batchGoodsDetailRequest);
+            List<GoodsDetail> listGoodsDetail = apiResponse.getLists();
             GoodsDetail goodsDetail = listGoodsDetail.get(0);
             System.out.println(goodsDetail.getTitle());
 
@@ -76,8 +76,8 @@ SDK基本用法示例
             //批量更新商品
             BatchGoodsUpdateRequest batchGoodsUpdateRequest = new BatchGoodsUpdateRequest();
             batchGoodsUpdateRequest.setGoodsIds("10362,10363");
-            ApiResponse<String> apiResponse5 = apiClient.exec(batchGoodsUpdateRequest);
-            List<String> list = apiResponse5.getLists();
+            ApiResponse<String> apiResponse = apiClient.exec(batchGoodsUpdateRequest);
+            List<String> list = apiResponse.getLists();
             System.out.println(list.size());
 
 
@@ -97,8 +97,8 @@ SDK基本用法示例
             request.setLimit(10);
             request.setSource(2);
 
-            ApiResponse<CategoryList> apiResponse3 = apiClient.exec(request);
-            List<CategoryList> listCateGory = apiResponse3.getLists();
+            ApiResponse<CategoryList> apiResponse = apiClient.exec(request);
+            List<CategoryList> listCateGory = apiResponse.getLists();
             CategoryList categoryList = listCateGory.get(0);
             System.out.println(categoryList.getTitle());
             
@@ -131,16 +131,16 @@ SDK基本用法示例
             checkOrderRequest.setSpu(spuList);
             checkOrderRequest.setAddress(address);
 
-            ApiResponse apiResponse4 = apiClient.exec(checkOrderRequest);
-            System.out.println(apiResponse4.getMsg());
-            List<CheckOrder> lists = apiResponse4.getLists();
+            ApiResponse apiResponse = apiClient.exec(checkOrderRequest);
+            System.out.println(apiResponse.getMsg());
+            List<CheckOrder> lists = apiResponse.getLists();
             CheckOrder checkOrder = lists.get(0);
             System.out.println(checkOrder.getSkus().get(0));
 
 
             //商品可售性校验
             CheckBanGoodsRequest checkBanGoodsRequest = new CheckBanGoodsRequest();
-            CheckBanGoodsRequest.Address address2 = new CheckBanGoodsRequest.Address();
+            CheckBanGoodsRequest.Address address = new CheckBanGoodsRequest.Address();
             address.setConsignee("小明");
             address.setPhone("13800138000");
             address.setProvince("北京");
@@ -149,44 +149,44 @@ SDK基本用法示例
             address.setStreet("大屯街道");
             address.setDescription("光明小区110号");
 
-            CheckOrderRequest.Spu spu2 = new CheckOrderRequest.Spu();
-            spu2.setNumber((long)1);
-            spu2.setSku((long)2033490);
-            List spuList2 = new ArrayList<>();
+            CheckOrderRequest.Spu spu = new CheckOrderRequest.Spu();
+            spu.setNumber((long)1);
+            spu.setSku((long)2033490);
+            List spuList = new ArrayList<>();
 
-            spuList.add(spu2);
-            checkBanGoodsRequest.setSpu(spuList2);
-            checkBanGoodsRequest.setAddress(address2);
-            ApiResponse<CheckBanGoods> apiResponse41 = apiClient.exec(checkBanGoodsRequest);
-            System.out.println(apiResponse41.getObject().getCode());
-            CheckBanGoods checkBanGoods = apiResponse41.getObject();
+            spuList.add(spu);
+            checkBanGoodsRequest.setSpu(spuList);
+            checkBanGoodsRequest.setAddress(address);
+            ApiResponse<CheckBanGoods> apiResponse = apiClient.exec(checkBanGoodsRequest);
+            System.out.println(apiResponse.getObject().getCode());
+            CheckBanGoods checkBanGoods = apiResponse.getObject();
             CheckBanGoods.DataBean dataBean = checkBanGoods.getData();
             System.out.println(dataBean.getAvailable().get(0));
 
 
             //下单
             PlayOrderRequest playOrderRequest = new PlayOrderRequest();
-            PlayOrderRequest.Address address3 = new PlayOrderRequest.Address();
-            address2.setConsignee("小明");
-            address2.setPhone("13800138000");
-            address2.setProvince("北京");
-            address2.setCity("北京");
-            address2.setArea("朝阳区");
-            address2.setStreet("大屯街道");
-            address2.setDescription("光明小区110号");
+            PlayOrderRequest.Address address = new PlayOrderRequest.Address();
+            address.setConsignee("小明");
+            address.setPhone("13800138000");
+            address.setProvince("北京");
+            address.setCity("北京");
+            address.setArea("朝阳区");
+            address.setStreet("大屯街道");
+            address.setDescription("光明小区110号");
 
-            PlayOrderRequest.Spu spu3 = new PlayOrderRequest.Spu();
+            PlayOrderRequest.Spu spu = new PlayOrderRequest.Spu();
             spu3.setNumber((long)1);
             spu3.setSku((long)2033490);
-            List spuList3 = new ArrayList<>();
-            spuList2.add(spu3);
+            List spuList = new ArrayList<>();
+            spuList2.add(spu);
 
-            playOrderRequest.setSpu(spuList3);
-            playOrderRequest.setAddress(address3);
+            playOrderRequest.setSpu(spuList);
+            playOrderRequest.setAddress(address);
             playOrderRequest.setOrderSn("SN1234567890");
 
-            ApiResponse apiResponse5 = apiClient.exec(playOrderRequest);
-            System.out.println(apiResponse5.getMsg());
+            ApiResponse apiResponse = apiClient.exec(playOrderRequest);
+            System.out.println(apiResponse.getMsg());
             if(1 == apiResponse5.getCode()){
                 System.out.println("下单成功");
             }
@@ -195,8 +195,8 @@ SDK基本用法示例
             //失败补单
             OrderAgainRequest orderAgainRequest = new OrderAgainRequest();
             orderAgainRequest.setOrderSn("");//二级订单号
-            ApiResponse apiResponse51 = apiClient.exec(orderAgainRequest);
-            if(1 == apiResponse51.getCode()){
+            ApiResponse apiResponse = apiClient.exec(orderAgainRequest);
+            if(1 == apiResponse.getCode()){
                 System.out.println("补单成功");
             }
 
@@ -215,8 +215,8 @@ SDK基本用法示例
             orderListRequest.setPage(1);
             orderListRequest.setLimit(10);
             //  orderListRequest.setSearch(oredrSearch);
-            ApiResponse<OrderList> apiResponse42 = apiClient.exec(orderListRequest);
-            List<OrderList> orderToList = apiResponse42.getLists();
+            ApiResponse<OrderList> apiResponse = apiClient.exec(orderListRequest);
+            List<OrderList> orderToList = apiResponse.getLists();
             OrderList orderList = orderToList.get(0);
             System.out.println(orderList.getAddress().getConsignee());
             System.out.println(orderList.getChildren().get(0).getGoods().get(0).getSkuName());
@@ -235,8 +235,8 @@ SDK基本用法示例
             OrderErrorListRequest orderErrorListRequest = new OrderErrorListRequest();
             orderErrorListRequest.setPage(1);
             orderErrorListRequest.setLimit(10);
-            ApiResponse<OrderErrorList> apiResponse44 = apiClient.exec(orderErrorListRequest);
-            List<OrderErrorList> orderLists = apiResponse44.getLists();
+            ApiResponse<OrderErrorList> apiResponse = apiClient.exec(orderErrorListRequest);
+            List<OrderErrorList> orderLists = apiResponse.getLists();
             OrderErrorList orderList = orderLists.get(0);
             System.out.println(orderList.getMessage());
 
@@ -246,8 +246,8 @@ SDK基本用法示例
             orderLogisticRequest.setOrderSn("SH20200622151638351628");
             orderLogisticRequest.setSku((long)9054);
 
-            ApiResponse<OrderLogistic> apiResponse6 = apiClient.exec(orderLogisticRequest);
-            OrderLogistic orderLogistic = apiResponse6.getObject();
+            ApiResponse<OrderLogistic> apiResponse = apiClient.exec(orderLogisticRequest);
+            OrderLogistic orderLogistic = apiResponse.getObject();
             System.out.println(orderLogistic.getInfo().getName());
             System.out.println(orderLogistic.getInfo().getNo());
 
@@ -255,8 +255,8 @@ SDK基本用法示例
 
             //物流公司列表
             OrderLogisticFirmsRequest orderLogisticFirmsRequest = new OrderLogisticFirmsRequest();
-            ApiResponse<OrderLogisticFirms> apiResponse7 = apiClient.exec(orderLogisticFirmsRequest);
-            List<OrderLogisticFirms> listOrderLogisticFirms = apiResponse7.getLists();
+            ApiResponse<OrderLogisticFirms> apiResponse = apiClient.exec(orderLogisticFirmsRequest);
+            List<OrderLogisticFirms> listOrderLogisticFirms = apiResponse.getLists();
             OrderLogisticFirms orderLogisticFirms = listOrderLogisticFirms.get(0);
             System.out.println(orderLogisticFirms.getName());
 
@@ -268,8 +268,8 @@ SDK基本用法示例
             section.setFrom(10);
             section.setTo(100);
             goodsStorageOnlineRequest.setAgreement_price(section);
-            ApiResponse<GoodsStorageOnlineList> apiResponse4 =  apiClient.exec(goodsStorageOnlineRequest);
-            GoodsStorageOnlineList goodsStorageOnlineList = apiResponse4.getLists().get(0);
+            ApiResponse<GoodsStorageOnlineList> apiResponse =  apiClient.exec(goodsStorageOnlineRequest);
+            GoodsStorageOnlineList goodsStorageOnlineList = apiResponse.getLists().get(0);
             System.out.println(goodsStorageOnlineList.getThird_brand_name());
   
 
@@ -300,8 +300,8 @@ SDK基本用法示例
             Set<Long> set = new HashSet<>();
             set.add((long)226415);
             goodsStorageAddRequest.setGoods_ids(set);
-            ApiResponse<GoodsStorage> apiResponse8 = apiClient.exec(goodsStorageAddRequest);
-            GoodsStorage goodsStorage = apiResponse8.getObject();
+            ApiResponse<GoodsStorage> apiResponse = apiClient.exec(goodsStorageAddRequest);
+            GoodsStorage goodsStorage = apiResponse.getObject();
             System.out.println(apiResponse8.getCode());
             System.out.println(goodsStorage.getTotal());
 
@@ -311,8 +311,8 @@ SDK基本用法示例
             goodsStorageListRequest.setPage(1);
             goodsStorageListRequest.setLimit(10);
             goodsStorageListRequest.setSource(0);
-            ApiResponse<GoodsList> apiResponse9 = apiClient.exec(goodsStorageListRequest);
-            List<GoodsList> listGoods2 = apiResponse9.getLists();
+            ApiResponse<GoodsList> apiResponse = apiClient.exec(goodsStorageListRequest);
+            List<GoodsList> listGoods2 = apiResponse.getLists();
             GoodsList goodsList2 = listGoods2.get(0);
             System.out.println(goodsList2.getTitle());
             System.out.println(apiResponse9.getCount());
@@ -320,18 +320,18 @@ SDK基本用法示例
 
             //选品库删除选品
             GoodsStorageDelRequest goodsStorageDelRequest = new GoodsStorageDelRequest();
-            Set<Long> set2 = new HashSet<>();
-            set2.add((long)226415);
-            goodsStorageDelRequest.setGoods_ids(set2);
-            ApiResponse<GoodsStorage> apiResponse10 = apiClient.exec(goodsStorageDelRequest);
-            GoodsStorage goodsStorage2 = apiResponse10.getObject();
+            Set<Long> set = new HashSet<>();
+            set.add((long)226415);
+            goodsStorageDelRequest.setGoods_ids(set);
+            ApiResponse<GoodsStorage> apiResponse = apiClient.exec(goodsStorageDelRequest);
+            GoodsStorage goodsStorage = apiResponse.getObject();
             System.out.println(apiResponse10.getCode());
             System.out.println(goodsStorage2.getTotal());
 
             //清空选品库 执行此操作选品库所有产品会被删除 ******谨慎操作******
             GoodsStorageClearRequest goodsStorageClearRequest = new GoodsStorageClearRequest();
-            ApiResponse<GoodsStorage> apiResponse11 = apiClient.exec(goodsStorageClearRequest);
-            if(1 == apiResponse11.getCode()){
+            ApiResponse<GoodsStorage> apiResponse = apiClient.exec(goodsStorageClearRequest);
+            if(1 == apiResponse.getCode()){
                 System.out.println("清空成功");
             }
             
@@ -369,8 +369,8 @@ SDK基本用法示例
             afterServiceUploadRequest.setPictures(list);
             afterServiceUploadRequest.setSku((long)9604070);
             afterServiceUploadRequest.setOrderSn("SN20200813181909lZ");
-            ApiResponse<AfterServiceUpload> apiResponse1 = apiClient.exec(afterServiceUploadRequest);
-            System.out.println(apiResponse1.getObject().getUrls().get(0));
+            ApiResponse<AfterServiceUpload> apiResponse = apiClient.exec(afterServiceUploadRequest);
+            System.out.println(apiResponse.getObject().getUrls().get(0));
             
             
             
