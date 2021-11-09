@@ -16,7 +16,7 @@ public class GoodsComments {
 
     private String content;
 
-    private Integer createdTime;
+    private Long createdTime;
 
     public Long getId() {
         return id;
@@ -50,11 +50,11 @@ public class GoodsComments {
         this.content = content;
     }
 
-    public Integer getCreatedTime() {
+    public Long getCreatedTime() {
         return createdTime;
     }
 
-    public void setCreatedTime(Integer createdTime) {
+    public void setCreatedTime(Long createdTime) {
         this.createdTime = createdTime;
     }
 }

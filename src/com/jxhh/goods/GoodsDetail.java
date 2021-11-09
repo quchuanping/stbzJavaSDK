@@ -74,8 +74,8 @@ public class GoodsDetail {
     private Integer real_month_sale;
     private Integer real_return_sale;
     private Integer real_month_return_sale;
-    private Integer created_time;
-    private Integer updated_time;
+    private Long created_time;
+    private Long updated_time;
     private Integer is_free_shipping;
     private Long choose_count;
     private String description;
@@ -307,19 +307,19 @@ public class GoodsDetail {
         this.real_month_return_sale = real_month_return_sale;
     }
 
-    public Integer getCreated_time() {
+    public Long getCreated_time() {
         return created_time;
     }
 
-    public void setCreated_time(Integer created_time) {
+    public void setCreated_time(Long created_time) {
         this.created_time = created_time;
     }
 
-    public Integer getUpdated_time() {
+    public Long getUpdated_time() {
         return updated_time;
     }
 
-    public void setUpdated_time(Integer updated_time) {
+    public void setUpdated_time(Long updated_time) {
         this.updated_time = updated_time;
     }
 

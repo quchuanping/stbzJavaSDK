@@ -63,7 +63,7 @@ public class GoodsList {
 	private String unit;
 	private Long total_stock;
 	private Long activity_price;
-	private Integer created_time;
+	private Long created_time;
 	private String dis_category_id;
 	private Integer source;
 	private String cover;
@@ -77,7 +77,7 @@ public class GoodsList {
 	private Integer real_sale;
 	private Long shop_id;
 	private Long third_id;
-	private Integer updated_time;
+	private Long updated_time;
 	private Long guide_price;
 	private Long sale_price;
 	private Long cost_price;
@@ -168,11 +168,11 @@ public class GoodsList {
 		this.activity_price = activity_price;
 	}
 
-	public Integer getCreated_time() {
+	public Long getCreated_time() {
 		return created_time;
 	}
 
-	public void setCreated_time(Integer created_time) {
+	public void setCreated_time(Long created_time) {
 		this.created_time = created_time;
 	}
 
@@ -280,11 +280,11 @@ public class GoodsList {
 		this.third_id = third_id;
 	}
 
-	public Integer getUpdated_time() {
+	public Long getUpdated_time() {
 		return updated_time;
 	}
 
-	public void setUpdated_time(Integer updated_time) {
+	public void setUpdated_time(Long updated_time) {
 		this.updated_time = updated_time;
 	}
 

@@ -24,7 +24,7 @@ public class CategoryList {
     private String title;
     private Integer level;
     private Integer state;
-    private Integer create_time;
+    private Long create_time;
     private Integer sort;
     private Integer source;
 
@@ -76,11 +76,11 @@ public class CategoryList {
         this.state = state;
     }
 
-    public Integer getCreate_time() {
+    public Long getCreate_time() {
         return create_time;
     }
 
-    public void setCreate_time(Integer create_time) {
+    public void setCreate_time(Long create_time) {
         this.create_time = create_time;
     }
 
